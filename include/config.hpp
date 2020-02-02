@@ -3,4 +3,6 @@
 
 bool search_cfg();
 
+bool delete_cfg();
+
 #endif

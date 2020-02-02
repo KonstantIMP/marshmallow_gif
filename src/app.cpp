@@ -9,9 +9,6 @@ int app_init(int *argc, char ***argv){
 
     if(!(search_cfg())){
         start_setup();
-
-        if(!(search_cfg())) return 2;
     }
-
     return 0;
 }
