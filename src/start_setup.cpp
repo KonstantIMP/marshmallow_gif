@@ -1,9 +1,9 @@
 #include "../include/start_setup.hpp"
-#include "../include/config.hpp"
 
 #define START_SETUP_FORM "form/start_setup.glade"
 
 #include <gtk/gtk.h>
+
 
 GtkWidget * window;
 

@@ -1,11 +1,13 @@
 #include "../include/config.hpp"
 
+#include <gtk/gtk.h>
+
 #include <fstream>
 #include <cstring>
 #include <cstdio>
 
 #if defined(linux) || defined(__linux)
-    #define CFG_PATH  strcat(getenv("HOME"),"/.config/marshmallow_gif.txt")
+    #define CFG_PATH  strcat((char*)g_get_home_dir(),"/.config/marshmallow_gif.txt")
 #elif defined(_WIN32) || defined (_WIN64)
     #define CFG_PATH ""
 #else
@@ -13,9 +15,9 @@
 #endif
 
 bool search_cfg(){
-    std::ifstream cfg(CFG_PATH);
+    std::ifstream cfg_file(CFG_PATH);
 
-    return cfg.is_open();
+    return cfg_file.is_open();
 }
 
 bool delete_cfg(){

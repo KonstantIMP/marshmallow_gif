@@ -10,5 +10,6 @@ int app_init(int *argc, char ***argv){
     if(!(search_cfg())){
         start_setup();
     }
+
     return 0;
 }
