@@ -3,7 +3,10 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="setup_win">
+    <property name="name">setup_win</property>
     <property name="can_focus">False</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="urgency_hint">True</property>
     <child>
       <placeholder/>
     </child>
@@ -21,6 +24,9 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <style>
+              <class name="btn"/>
+            </style>
           </object>
           <packing>
             <property name="left_attach">2</property>
@@ -49,6 +55,9 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <style>
+              <class name="btn"/>
+            </style>
           </object>
           <packing>
             <property name="left_attach">0</property>
@@ -62,6 +71,9 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <style>
+              <class name="btn"/>
+            </style>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -75,6 +87,9 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <style>
+              <class name="btn"/>
+            </style>
           </object>
           <packing>
             <property name="left_attach">2</property>
@@ -86,7 +101,7 @@
             <property name="name">sys_msg</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">label</property>
+            <property name="label" translatable="yes">hhj</property>
           </object>
           <packing>
             <property name="left_attach">0</property>
@@ -152,6 +167,9 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <style>
+              <class name="btn"/>
+            </style>
           </object>
           <packing>
             <property name="left_attach">1</property>
