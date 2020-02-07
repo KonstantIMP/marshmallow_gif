@@ -5,7 +5,6 @@
   <object class="GtkWindow" id="setup_win">
     <property name="name">setup_win</property>
     <property name="can_focus">False</property>
-    <property name="skip_taskbar_hint">True</property>
     <property name="urgency_hint">True</property>
     <child>
       <placeholder/>

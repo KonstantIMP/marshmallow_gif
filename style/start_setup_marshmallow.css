@@ -1,3 +1,168 @@
+#setup_win{
+    background-color: #2d313d;
+}
+
+.btn{
+    margin: 10px;
+}
+
+#hello_msg{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 32px;
+
+    color: #e8324f;
+}
+
+#thank_msg{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 14px;
+
+    color: #e8324f;  
+}
+
+#theme_msg{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 15px;
+
+    color: #e8324f;
+
+    margin-bottom: 10px;
+}
+
+#sys_msg{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 12px;
+
+    color: #e8324f;
+}
+
+#marsh_msg{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 12px;
+
+    color: #e8324f;
+}
+
+#or_msg{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 12px;
+
+    color: #e8324f;
+}
+
+#up_sep{
+    border-top: 2px solid #e8324f;
+
+    margin: 8px;
+    margin-bottom: 12px;
+}
+
+#down_sep{
+    border-top: 2px solid #e8324f;
+
+    margin: 8px;
+}
+
 #lang_btn{
-    background-color: white;
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 22px;
+
+    background-color: #2d313d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+    border: 2px solid #e8324f;
+}
+
+#lang_btn:hover{
+    background-color: #ffffff;
+
+    color: #2d313d;
+}
+
+#lang_btn:active{
+    background-color: #ffff;
+
+    color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#marsh_btn{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 14px;
+
+    background-color: #2d313d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+    border: 2px solid #e8324f;
+}
+
+#marsh_btn:hover{
+    background-color: #ffffff;
+
+    color: #2d313d;
+}
+
+#marsh_btn:active{
+    background-color: #ffff;
+
+    color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#or_btn{
+    font-family: "DejaVu Sans", "Georgia";
+    font-size: 14px;
+
+    background-color: #363636;
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+}
+
+#or_btn:hover{
+    background-color: #ff4d00;
+
+    border-color: #363636;
+}
+
+#or_btn:active{
+    background-color: #ffffff;
+
+    color: #ff4d00;
+
+    border-color: #363636;
+}
+
+#ok_btn{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 14px;
+
+    background-color: #2d313d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+    border: 2px solid #e8324f;
+}
+
+#ok_btn:hover{
+    background-color: #ffffff;
+
+    color: #2d313d;
+}
+
+#ok_btn:active{
+    background-color: #ffff;
+
+    color: #e8324f;
+
+    border-color: #ffffff;
 }

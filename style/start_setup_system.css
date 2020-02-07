@@ -1,7 +1,100 @@
 .btn{
-    margin: 12px;
+    margin: 10px;
+}
+
+#hello_msg{
+    font-size: 32px;
+    font-family: "Arial", "Times New Roman";
+}
+
+#thank_msg{
+    font-size: 14px;
+    font-family: "Arial", "Times New Roman";
+}
+
+#theme_msg{
+    font-size: 18px;
+    font-family: "Arial", "Times New Roman";
+
+    margin-bottom: 8px;
+}
+
+#sys_msg{
+    font-size: 12px;
+    font-family: "Arial", "Times New Roman";
+}
+
+#marsh_msg{
+    font-size: 12px;
+    font-family: "Arial", "Times New Roman";
+}
+
+#or_msg{
+    font-size: 12px;
+    font-family: "Arial", "Times New Roman";
+}
+
+#up_sep{
+    margin: 8px;
+    margin-bottom: 12px;
+}
+
+#down_sep{
+    margin: 8px;
 }
 
 #lang_btn{
     font-size: 23px;
+}
+
+#marsh_btn{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 14px;
+
+    background-color: #2d313d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+    border: 2px solid #e8324f;
+}
+
+#marsh_btn:hover{
+    background-color: #ffffff;
+
+    color: #2d313d;
+}
+
+#marsh_btn:active{
+    background-color: #ffff;
+
+    color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#or_btn{
+    font-family: "DejaVu Sans", "Georgia";
+    font-size: 14px;
+
+    background-color: #363636;
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+}
+
+#or_btn:hover{
+    background-color: #ff4d00;
+
+    border-color: #363636;
+}
+
+#or_btn:active{
+    background-color: #ffffff;
+
+    color: #ff4d00;
+
+    border-color: #363636;
 }

@@ -9,9 +9,13 @@
 #include <gtk/gtk.h>
 #include <locale>
 
+std::string theme;
+
 // -------------------- Прототипы функций --------------------
 
 static GtkWidget * create_window();
+
+void connect_signals();
 
 void connect_css();
 
@@ -23,6 +27,8 @@ void set_lang_by_system();
 
 void set_ru();
 void set_en();
+
+void change_lang();
 
 // -------------------- Объекты окна --------------------
 
@@ -47,14 +53,14 @@ GtkWidget * down_sep;
 GtkCssProvider * setup_css;
 
 GtkWidget * en;
-//GtkImage * ru;
+GtkWidget * ru;
 
 // -------------------- Функция обработчик окна настроек ----------------------
 
 void start_setup(){
-    window = create_window();
+    theme = "sys";
 
-    g_signal_connect(G_OBJECT(window), "destroy", G_CALLBACK(gtk_main_quit), NULL);
+    window = create_window();
 
     gtk_widget_show(window);
 
@@ -84,6 +90,9 @@ static GtkWidget * create_window(){
 
     setup_win = GTK_WIDGET(gtk_builder_get_object(setup_win_builder, "setup_win"));
 
+    gtk_window_set_icon_from_file(GTK_WINDOW(setup_win), "image/start.png", NULL);
+    gtk_window_set_title(GTK_WINDOW(setup_win), "Let`s go");
+
     if(!(setup_win)){
         g_critical("Unable to load window");
 
@@ -108,12 +117,16 @@ static GtkWidget * create_window(){
 
     connect_css();
 
-    gtk_window_set_default_size(GTK_WINDOW(setup_win), 100, -1);
+    connect_signals();
+
+    gtk_window_set_default_size(GTK_WINDOW(setup_win), -1, -1);
     gtk_window_set_resizable(GTK_WINDOW(setup_win), FALSE);
 
     gtk_label_set_max_width_chars (GTK_LABEL(thank_msg), 50);
 
     gtk_widget_set_name(GTK_WIDGET(setup_win), "setup_win");
+
+    g_signal_connect(G_OBJECT(setup_win), "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
     set_lang_by_system();
 
@@ -154,18 +167,24 @@ void connect_css(){
 
 void set_sys_css(){
     gtk_css_provider_load_from_path(setup_css, START_SYS_CSS, NULL);
+
+    theme = "sys";
 }
 
 // -------------------- Розовая тема --------------------
 
 void set_marsh_css(){
     gtk_css_provider_load_from_path(setup_css, START_MARSH_CSS, NULL);
+
+    theme = "marsh";
 }
 
 // -------------------- Оранжевая тема --------------------
 
 void set_or_css(){
     gtk_css_provider_load_from_path(setup_css, START_OR_CSS, NULL);
+
+    theme = "or";
 }
 
 // -------------------- Установка языка ----------------------
@@ -174,7 +193,8 @@ void set_lang_by_system(){
     std::string lang = std::locale("").name();
 
     en = gtk_image_new_from_file("image/en.png");
-    gtk_image_set_pixel_size(GTK_IMAGE(en), 7);
+
+    ru = gtk_image_new_from_file("image/ru.png");
 
     if(lang == "ru_RU.UTF-8") set_ru();
     else set_en();
@@ -183,11 +203,16 @@ void set_lang_by_system(){
 // -------------------- Русский язык --------------------
 
 void set_ru(){
+    gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
+
+    g_object_unref(en);
+    en = gtk_image_new_from_file("image/en.png");
+
     gtk_button_set_image(GTK_BUTTON(lang_btn), en);
     gtk_button_set_label(GTK_BUTTON(lang_btn), "EN");
     gtk_button_set_image_position(GTK_BUTTON(lang_btn), GTK_POS_LEFT);
 
-    gtk_button_set_label(GTK_BUTTON(sys_btn), "Как обычно");
+    gtk_button_set_label(GTK_BUTTON(sys_btn), "Классический");
 
     gtk_button_set_label(GTK_BUTTON(marsh_btn), "Фирменный");
 
@@ -198,7 +223,7 @@ void set_ru(){
     gtk_label_set_text(GTK_LABEL(hello_msg), "Привет!");
     gtk_label_set_justify(GTK_LABEL(hello_msg), GTK_JUSTIFY_CENTER);
 
-    gtk_label_set_text(GTK_LABEL(thank_msg), "Спасибо за выбор нашего програмного обеспечения! Приятного использования!");
+    gtk_label_set_text(GTK_LABEL(thank_msg), "Спасибо за выбор нашего програмного обеспечения!\nПриятного использования!");
     gtk_label_set_justify(GTK_LABEL(thank_msg), GTK_JUSTIFY_CENTER);
     gtk_label_set_line_wrap (GTK_LABEL(thank_msg), TRUE);
 
@@ -218,5 +243,57 @@ void set_ru(){
 // -------------------- Английский язык --------------------
 
 void set_en(){
+    gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
 
+    g_object_unref(ru);
+    ru = gtk_image_new_from_file("image/ru.png");
+
+    gtk_button_set_image(GTK_BUTTON(lang_btn), ru);
+    gtk_button_set_label(GTK_BUTTON(lang_btn), "RU");
+    gtk_button_set_image_position(GTK_BUTTON(lang_btn), GTK_POS_LEFT);
+
+    gtk_button_set_label(GTK_BUTTON(sys_btn), "Classic");
+
+    gtk_button_set_label(GTK_BUTTON(marsh_btn), "Branded");
+
+    gtk_button_set_label(GTK_BUTTON(or_btn), "Oranje");
+
+    gtk_button_set_label(GTK_BUTTON(ok_btn), "Ok");
+
+    gtk_label_set_text(GTK_LABEL(hello_msg), "Hi!");
+    gtk_label_set_justify(GTK_LABEL(hello_msg), GTK_JUSTIFY_CENTER);
+
+    gtk_label_set_text(GTK_LABEL(thank_msg), "Thanks for using this programm!\nEnjoy using!");
+    gtk_label_set_justify(GTK_LABEL(thank_msg), GTK_JUSTIFY_CENTER);
+    gtk_label_set_line_wrap (GTK_LABEL(thank_msg), TRUE);
+
+    gtk_label_set_text(GTK_LABEL(theme_msg), "Choose style :");
+    gtk_label_set_justify(GTK_LABEL(theme_msg), GTK_JUSTIFY_CENTER);
+
+    gtk_label_set_text(GTK_LABEL(sys_msg), "System :");
+    gtk_label_set_justify(GTK_LABEL(sys_msg), GTK_JUSTIFY_CENTER);
+
+    gtk_label_set_text(GTK_LABEL(marsh_msg), "Marshmallow :");
+    gtk_label_set_justify(GTK_LABEL(marsh_msg), GTK_JUSTIFY_CENTER);
+
+    gtk_label_set_text(GTK_LABEL(or_msg), "Oranje :");
+    gtk_label_set_justify(GTK_LABEL(or_msg), GTK_JUSTIFY_CENTER);
+}
+
+// -------------------- Смена языка --------------------
+
+void change_lang(){
+    char *lang = {(char*)gtk_button_get_label(GTK_BUTTON(lang_btn))};
+
+    if(lang[0] == 'E' && lang[1] == 'N') set_en();
+    else set_ru();
+}
+
+// -------------------- Подключение сигналов ----------------------
+
+void connect_signals(){
+    g_signal_connect(G_OBJECT(lang_btn), "clicked", G_CALLBACK(change_lang), NULL);
+    g_signal_connect(G_OBJECT(sys_btn), "clicked", G_CALLBACK(set_sys_css), NULL);
+    g_signal_connect(G_OBJECT(marsh_btn), "clicked", G_CALLBACK(set_marsh_css), NULL);
+    g_signal_connect(G_OBJECT(or_btn), "clicked", G_CALLBACK(set_or_css), NULL);
 }
