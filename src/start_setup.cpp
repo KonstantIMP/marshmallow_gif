@@ -1,4 +1,5 @@
 #include "../include/start_setup.hpp"
+#include "../include/config.hpp"
 
 #define START_SETUP_FORM "form/start_setup.glade"
 
@@ -9,7 +10,7 @@
 #include <gtk/gtk.h>
 #include <locale>
 
-std::string theme;
+std::string theme_s;
 
 // -------------------- Прототипы функций --------------------
 
@@ -29,6 +30,8 @@ void set_ru();
 void set_en();
 
 void change_lang();
+
+void end_setup();
 
 // -------------------- Объекты окна --------------------
 
@@ -58,7 +61,7 @@ GtkWidget * ru;
 // -------------------- Функция обработчик окна настроек ----------------------
 
 void start_setup(){
-    theme = "sys";
+    theme_s = "sys";
 
     window = create_window();
 
@@ -126,7 +129,7 @@ static GtkWidget * create_window(){
 
     gtk_widget_set_name(GTK_WIDGET(setup_win), "setup_win");
 
-    g_signal_connect(G_OBJECT(setup_win), "destroy", G_CALLBACK(gtk_main_quit), NULL);
+    g_signal_connect(G_OBJECT(setup_win), "destroy", G_CALLBACK(end_setup), NULL);
 
     set_lang_by_system();
 
@@ -168,7 +171,7 @@ void connect_css(){
 void set_sys_css(){
     gtk_css_provider_load_from_path(setup_css, START_SYS_CSS, NULL);
 
-    theme = "sys";
+    theme_s = "sys";
 }
 
 // -------------------- Розовая тема --------------------
@@ -176,7 +179,7 @@ void set_sys_css(){
 void set_marsh_css(){
     gtk_css_provider_load_from_path(setup_css, START_MARSH_CSS, NULL);
 
-    theme = "marsh";
+    theme_s = "marsh";
 }
 
 // -------------------- Оранжевая тема --------------------
@@ -184,7 +187,7 @@ void set_marsh_css(){
 void set_or_css(){
     gtk_css_provider_load_from_path(setup_css, START_OR_CSS, NULL);
 
-    theme = "or";
+    theme_s = "or";
 }
 
 // -------------------- Установка языка ----------------------
@@ -296,4 +299,20 @@ void connect_signals(){
     g_signal_connect(G_OBJECT(sys_btn), "clicked", G_CALLBACK(set_sys_css), NULL);
     g_signal_connect(G_OBJECT(marsh_btn), "clicked", G_CALLBACK(set_marsh_css), NULL);
     g_signal_connect(G_OBJECT(or_btn), "clicked", G_CALLBACK(set_or_css), NULL);
+    g_signal_connect(G_OBJECT(ok_btn), "clicked", G_CALLBACK(end_setup), NULL);
+}
+
+// -------------------- Окончание первичной настройки ----------------------
+
+void end_setup(){
+    char *lang = {(char*)gtk_button_get_label(GTK_BUTTON(lang_btn))};
+
+    std::string language;
+
+    if(lang[0] == 'E' && lang[1] == 'N') language = "ru";
+    else language = "en";
+
+    create_cfg(theme_s, language, STANDART, STANDART, STANDART, STANDART);
+
+    gtk_main_quit();
 }

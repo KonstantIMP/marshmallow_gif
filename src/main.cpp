@@ -12,6 +12,6 @@ using namespace std;
 
 int main(int argc, char *argv[]){
     app_init(&argc, &argv);
-    
+
     return 0;
 }
