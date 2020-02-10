@@ -19,6 +19,6 @@ set(SOURCE_LIB "src/config.cpp")
 
 add_library(app STATIC ${SOURCE_LIB})
 
-add_executable(main ${SOURCE_EXE})
+add_executable(marshmallow_gif ${SOURCE_EXE})
 
-target_link_libraries(main app ${GTK3_LIBRARIES})
+target_link_libraries(marshmallow_gif app ${GTK3_LIBRARIES})
