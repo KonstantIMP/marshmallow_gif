@@ -17,6 +17,8 @@ static GtkWidget * create_main_window();
 
 void connect_main_css();
 
+void set_text_by_lang();
+
 // -------------------- Объекты окна --------------------
 
 GtkWidget * main_window;
@@ -119,11 +121,18 @@ static GtkWidget * create_main_window(){
 
     connect_main_css();
 
+    set_text_by_lang();
+
+    gtk_window_set_default_size(GTK_WINDOW(main_win), -1, -1);
+    gtk_window_set_resizable(GTK_WINDOW(main_win), TRUE);
+
     gtk_widget_set_name(GTK_WIDGET(main_win), "main_win");
 
     g_signal_connect(G_OBJECT(main_win), "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
     g_object_unref(main_win_builder);
+
+    gtk_container_set_border_width(GTK_CONTAINER(main_win), 5);
 
     return main_win;
 }
@@ -153,4 +162,33 @@ void connect_main_css(){
     gtk_widget_set_name(GTK_WIDGET(speed_indicator_msg), "speed_indicator");
 
     gtk_widget_set_name(GTK_WIDGET(gif_place), "gif_place");
+}
+
+// -------------------- Установка языка ----------------------
+
+void set_text_by_lang(){
+    if(get_param(LANG) == "ru"){
+        gtk_button_set_label(GTK_BUTTON(open_btn), "Открыть");
+
+        gtk_label_set_text(GTK_LABEL(speed_pointer_msg), "Скорость");
+        gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
+
+        gtk_label_set_text(GTK_LABEL(gif_place), "Тут пусто\n:-(");
+    }
+    else{
+        gtk_button_set_label(GTK_BUTTON(open_btn), "Open");
+
+        gtk_label_set_text(GTK_LABEL(speed_pointer_msg), "Speed");
+        gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
+
+        gtk_label_set_text(GTK_LABEL(gif_place), "It's empty here\n:-(");
+    }
+
+    gtk_label_set_justify(GTK_LABEL(open_btn), GTK_JUSTIFY_CENTER);
+
+    gtk_label_set_xalign(GTK_LABEL(speed_pointer_msg), 0.08);
+
+    gtk_label_set_xalign(GTK_LABEL(speed_indicator_msg), 0.92);
+
+    gtk_label_set_justify(GTK_LABEL(gif_place), GTK_JUSTIFY_CENTER);
 }

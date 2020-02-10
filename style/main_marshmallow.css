@@ -1,0 +1,239 @@
+#main_win{
+    background-color: #2d313d;
+}
+
+#exit{
+    background-color: #2d313d;
+
+    border-radius: 7px;
+    border: 2px solid #e8324f;
+
+    margin: 7px 3px 5px 0px;
+}
+
+#exit:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#exit:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#option{
+    background-color: #2d313d;
+
+    border-radius: 7px;
+    border: 2px solid #e8324f;
+
+    margin: 7px 3px 5px 0px;
+}
+
+#option:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#option:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#open{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    color: #ffffff;
+
+    background-color: #2d313d;
+
+    border-radius: 7px;
+    border: 2px solid #e8324f;
+
+    margin: 7px 3px 5px 0px;
+}
+
+#open:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+
+    color: #2d313d;
+}
+
+#open:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+
+    color: #2d313d;
+}
+
+#play{
+    background-color: #2d313d;
+
+    border-radius: 7px;
+    border: 2px solid #e8324f;
+
+    margin: 7px 3px 5px 0px;
+}
+
+#play:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#play:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#prev_image{
+    background-color: #2d313d;
+
+    border-radius: 0px;
+    border-top: 2px solid #e8324f;
+
+    margin: 2px 0px 0px 0px;
+}
+
+#prev_image:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#prev_image:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#next_image{
+    background-color: #2d313d;
+
+    border-radius: 0px 7px 0px 0px;
+    border-top: 2px solid #e8324f;
+    border-right: 2px solid #e8324f;
+
+    margin: 2px 0px 0px 0px;
+}
+
+#next_image:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#next_image:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#speed_down{
+    background-color: #2d313d;
+
+    border-radius:0px;
+    border-bottom: 2px solid #e8324f;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#speed_down:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#speed_down:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#speed_up{
+    background-color: #2d313d;
+
+    border-radius:0px;
+    border-bottom: 2px solid #e8324f;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#speed_up:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#speed_up:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#speed_re{
+    background-color: #2d313d;
+
+    border-radius: 0px 0px 7px 0px;
+    border-bottom: 2px solid #e8324f;
+    border-right: 2px solid #e8324f;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#speed_re:hover{
+    background-color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#speed_re:active{
+    background-color: #ffffff;
+
+    border-color: #e8324d;
+}
+
+#speed_pointer{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    color: #ffffff;
+
+    border-radius: 7px 0px 0px 0px;
+    border-top: 2px solid #e8324f;
+    border-left: 2px solid #e8324f;
+
+    margin: 2px 0px 0px 0px;
+}
+
+#speed_indicator{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    color: #ffffff;
+
+    border-radius: 0px 0px 0px 7px;
+    border-bottom: 2px solid #e8324f;
+    border-left: 2px solid #e8324f;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#gif_place{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    font-size: 32px;
+
+    color: #ffffff;
+
+    background-color: #2d313d;
+
+    border-radius: 5px;
+    border: 2px solid #e8324f;
+}

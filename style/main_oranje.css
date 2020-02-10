@@ -1,0 +1,239 @@
+#main_win{
+    background-color: #363636;
+}
+
+#exit{
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 7px 3px 5px 0px;
+}
+
+#exit:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#exit:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#option{
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 7px 3px 5px 0px;
+}
+
+#option:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#option:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#open{
+    font-family: "DejaVu Sans", "Georgia";
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 7px 3px 5px 0px;
+}
+
+#open:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+
+    color: #363636;
+}
+
+#open:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+
+    color: #363636;
+}
+
+#play{
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 7px 0px 5px 0px;
+}
+
+#play:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#play:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#prev_image{
+    border-radius: 0px;
+    border-top: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 2px 0px 0px 0px;
+}
+
+#prev_image:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#prev_image:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#next_image{
+    border-radius: 0px;
+    border-top: 2px solid #ff4d00;
+    border-right: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 2px 0px 0px 0px;
+}
+
+#next_image:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#next_image:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#speed_down{
+    border-radius: 0px;
+    border-bottom: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#speed_down:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#speed_down:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#speed_up{
+    border-radius: 0px;
+    border-bottom: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#speed_up:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#speed_up:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#speed_re{
+    border-radius: 0px;
+    border-bottom: 2px solid #ff4d00;
+    border-right: 2px solid #ff4d00;
+
+    background-color: #363636;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#speed_re:hover{
+    background-color: #ff4d00;
+
+    border-color: #ffffff;
+}
+
+#speed_re:active{
+    background-color: #ffffff;
+
+    border-color: #ff4d00;
+}
+
+#speed_pointer{
+    font-family: "DejaVu Sans", "Georgia";
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border-left: 2px solid #ff4d00;
+    border-top: 2px solid #ff4d00;
+
+    margin: 2px 0px 0px 0px;
+}
+
+#speed_indicator{
+    font-family: "DejaVu Sans", "Georgia";
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border-left: 2px solid #ff4d00;
+    border-bottom: 2px solid #ff4d00;
+
+    margin: 0px 0px 0px 0px;
+}
+
+#gif_place{
+    font-family: "DejaVu Sans", "Georgia";
+
+    font-size: 32px;
+
+    color: #ffffff;
+
+    background-color: #363636;
+
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+}

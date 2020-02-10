@@ -68,6 +68,8 @@ void start_setup(){
     gtk_widget_show(window);
 
     gtk_main();
+
+    g_object_unref(window);
 }
 
 // -------------------- Создание окна первичных настроек ----------------------
