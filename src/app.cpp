@@ -1,5 +1,6 @@
 #include "../include/start_setup.hpp"
 #include "../include/config.hpp"
+#include "../include/gif.hpp"
 #include "../include/app.hpp"
 
 #define MAIN_WIN_FROM "form/main_win.glade"
@@ -8,6 +9,7 @@
 #define MARSH_THEME "style/main_marshmallow.css"
 #define OR_THEME "style/main_oranje.css"
 
+#include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtk.h>
 #include <string>
 
@@ -18,6 +20,10 @@ static GtkWidget * create_main_window();
 void connect_main_css();
 
 void set_text_by_lang();
+
+void signals_connect();
+
+void open_gif();
 
 // -------------------- Объекты окна --------------------
 
@@ -39,6 +45,8 @@ GtkWidget * speed_indicator_msg;
 GtkWidget * gif_place;
 
 GtkCssProvider * main_css;
+
+gif_viewer gif_animation;
 
 // -------------------- Инициализация приложения --------------------
 
@@ -64,6 +72,18 @@ int app_init(int *argc, char ***argv){
 
 int start_app(queue<std::string> gif_queue){
     main_window = create_main_window();
+
+    if(gif_queue.get_size() != 0){
+        if(gif_queue.get_size() == 1) gif_animation.open_file(gif_queue.dequeue());
+        else{
+            if(get_param(LOTS) == "last") gif_animation.open_file(gif_queue.dequeue());
+            else{
+                //Реализую позже
+            }
+        }
+    }
+
+    gif_animation.set_place(gif_place);
 
     gtk_widget_show(main_window);
 
@@ -121,6 +141,8 @@ static GtkWidget * create_main_window(){
 
     connect_main_css();
 
+    signals_connect();
+
     set_text_by_lang();
 
     gtk_window_set_default_size(GTK_WINDOW(main_win), -1, -1);
@@ -172,16 +194,12 @@ void set_text_by_lang(){
 
         gtk_label_set_text(GTK_LABEL(speed_pointer_msg), "Скорость");
         gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
-
-        gtk_label_set_text(GTK_LABEL(gif_place), "Тут пусто\n:-(");
     }
     else{
         gtk_button_set_label(GTK_BUTTON(open_btn), "Open");
 
         gtk_label_set_text(GTK_LABEL(speed_pointer_msg), "Speed");
         gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
-
-        gtk_label_set_text(GTK_LABEL(gif_place), "It's empty here\n:-(");
     }
 
     gtk_label_set_justify(GTK_LABEL(open_btn), GTK_JUSTIFY_CENTER);
@@ -189,6 +207,48 @@ void set_text_by_lang(){
     gtk_label_set_xalign(GTK_LABEL(speed_pointer_msg), 0.08);
 
     gtk_label_set_xalign(GTK_LABEL(speed_indicator_msg), 0.92);
+}
 
-    gtk_label_set_justify(GTK_LABEL(gif_place), GTK_JUSTIFY_CENTER);
+// -------------------- Обработка нажатий ----------------------
+
+void signals_connect(){
+    g_signal_connect(G_OBJECT(exit_btn), "clicked", G_CALLBACK(gtk_main_quit), NULL);
+    g_signal_connect(G_OBJECT(open_btn), "clicked", G_CALLBACK(open_gif), NULL);
+}
+
+// -------------------- Открытие gif анимации --------------------
+
+void open_gif(){
+    GtkWidget *dialog;
+    GtkFileFilter *filter;
+
+    if(get_param(LANG) == "ru") dialog = gtk_file_chooser_dialog_new("Выберите файл:", GTK_WINDOW(main_window),
+                                                                     GTK_FILE_CHOOSER_ACTION_OPEN, ("_Отмена"),
+                                                                     GTK_RESPONSE_CANCEL, ("_Открыть"),
+                                                                     GTK_RESPONSE_ACCEPT, NULL);
+    else dialog = gtk_file_chooser_dialog_new("Choose gif:", GTK_WINDOW(main_window),
+                                              GTK_FILE_CHOOSER_ACTION_OPEN, ("_Cancel"),
+                                              GTK_RESPONSE_CANCEL, ("_Open"),
+                                              GTK_RESPONSE_ACCEPT, NULL);
+
+    filter = gtk_file_filter_new();
+
+    gtk_file_filter_add_pattern(filter, "*.gif");
+
+    gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(dialog), filter);
+
+    gtk_widget_show_all(dialog);
+
+    gint resp = gtk_dialog_run(GTK_DIALOG(dialog));
+
+    if (resp == GTK_RESPONSE_ACCEPT){
+        std::string fname = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
+        gif_animation.open_file(fname);
+    }
+
+    gif_animation.set_place(gif_place); 
+
+    gtk_widget_destroy(dialog);
+
+    gtk_window_resize(GTK_WINDOW(main_window), 1, 1);
 }

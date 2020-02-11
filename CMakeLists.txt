@@ -15,7 +15,8 @@ set(SOURCE_EXE  src/main.cpp
                 src/app.cpp
                 src/start_setup.cpp)
 
-set(SOURCE_LIB "src/config.cpp")
+set(SOURCE_LIB  src/config.cpp
+                src/gif.cpp)
 
 add_library(app STATIC ${SOURCE_LIB})
 
