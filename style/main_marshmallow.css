@@ -8,7 +8,7 @@
     border-radius: 7px;
     border: 2px solid #e8324f;
 
-    margin: 7px 3px 5px 0px;
+    margin: 7px 3px 4px 0px;
 }
 
 #exit:hover{
@@ -29,7 +29,7 @@
     border-radius: 7px;
     border: 2px solid #e8324f;
 
-    margin: 7px 3px 5px 0px;
+    margin: 7px 3px 4px 0px;
 }
 
 #option:hover{
@@ -54,7 +54,7 @@
     border-radius: 7px;
     border: 2px solid #e8324f;
 
-    margin: 7px 3px 5px 0px;
+    margin: 7px 3px 4px 0px;
 }
 
 #open:hover{
@@ -79,7 +79,7 @@
     border-radius: 7px;
     border: 2px solid #e8324f;
 
-    margin: 7px 3px 5px 0px;
+    margin: 7px 3px 4px 0px;
 }
 
 #play:hover{
@@ -201,8 +201,20 @@
     border-color: #e8324d;
 }
 
+#sep_label{
+    background-color: #2d313d;
+
+    color: #2d313d;
+
+    border-top: 2px solid #e8324f;
+
+    margin: 2px 0px 0px 0px;
+}
+
 #speed_pointer{
     font-family: "Comic Sans MS", "Arial", "Hack";
+
+    font-size: 16px;
 
     color: #ffffff;
 
@@ -215,6 +227,8 @@
 
 #speed_indicator{
     font-family: "Comic Sans MS", "Arial", "Hack";
+
+    font-size: 16px;
 
     color: #ffffff;
 
@@ -236,4 +250,6 @@
 
     border-radius: 5px;
     border: 2px solid #e8324f;
+
+    padding: 7px;
 }

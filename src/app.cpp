@@ -9,7 +9,6 @@
 #define MARSH_THEME "style/main_marshmallow.css"
 #define OR_THEME "style/main_oranje.css"
 
-#include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtk.h>
 #include <string>
 
@@ -25,6 +24,8 @@ void signals_connect();
 
 void open_gif();
 
+void size_changed();
+
 // -------------------- Объекты окна --------------------
 
 GtkWidget * main_window;
@@ -38,6 +39,8 @@ GtkWidget * next_image_btn;
 GtkWidget * speed_down_btn;
 GtkWidget * speed_up_btn;
 GtkWidget * speed_re_btn;
+
+GtkWidget * sep_label;
 
 GtkWidget * speed_pointer_msg;
 GtkWidget * speed_indicator_msg;
@@ -84,6 +87,7 @@ int start_app(queue<std::string> gif_queue){
     }
 
     gif_animation.set_place(gif_place);
+    gif_animation.smart_resize();
 
     gtk_widget_show(main_window);
 
@@ -134,10 +138,14 @@ static GtkWidget * create_main_window(){
     speed_up_btn = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "speed_up"));
     speed_re_btn = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "speed_re"));
 
+    sep_label = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "sep_label"));
+
     speed_pointer_msg = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "speed_pointer"));
     speed_indicator_msg = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "speed_indicator"));
 
     gif_place = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "gif_place"));
+
+    gtk_widget_set_size_request(GTK_WIDGET(gif_place), 400, 400);
 
     connect_main_css();
 
@@ -151,6 +159,7 @@ static GtkWidget * create_main_window(){
     gtk_widget_set_name(GTK_WIDGET(main_win), "main_win");
 
     g_signal_connect(G_OBJECT(main_win), "destroy", G_CALLBACK(gtk_main_quit), NULL);
+    g_signal_connect(GTK_WIDGET(main_win), "size-allocate", G_CALLBACK(size_changed), NULL);
 
     g_object_unref(main_win_builder);
 
@@ -180,6 +189,8 @@ void connect_main_css(){
     gtk_widget_set_name(GTK_WIDGET(speed_up_btn), "speed_up");
     gtk_widget_set_name(GTK_WIDGET(speed_re_btn), "speed_re");
 
+    gtk_widget_set_name(GTK_WIDGET(sep_label), "sep_label");
+
     gtk_widget_set_name(GTK_WIDGET(speed_pointer_msg), "speed_pointer");
     gtk_widget_set_name(GTK_WIDGET(speed_indicator_msg), "speed_indicator");
 
@@ -201,8 +212,6 @@ void set_text_by_lang(){
         gtk_label_set_text(GTK_LABEL(speed_pointer_msg), "Speed");
         gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
     }
-
-    gtk_label_set_justify(GTK_LABEL(open_btn), GTK_JUSTIFY_CENTER);
 
     gtk_label_set_xalign(GTK_LABEL(speed_pointer_msg), 0.08);
 
@@ -248,7 +257,15 @@ void open_gif(){
 
     gif_animation.set_place(gif_place); 
 
+    gif_animation.smart_resize();
+
     gtk_widget_destroy(dialog);
 
     gtk_window_resize(GTK_WINDOW(main_window), 1, 1);
+}
+
+//
+
+void size_changed(){
+    gif_animation.reset();
 }
