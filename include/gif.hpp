@@ -33,18 +33,18 @@ public:
 
     void smart_resize();
 
-    void reset();
+    int get_speed_in_procents();
 
 private:
+    GdkPixbufAnimation * conversion_gif();
+
     std::string file_name;
 
     GtkWidget * frame_place;
 
-    GdkPixbufSimpleAnim * simple_gif_animation;
+    GdkPixbufAnimation * gif_animation;
 
-    float default_speed;
-
-    int speed;
+    int speed_in_procents;
 
     bool play_status;
 

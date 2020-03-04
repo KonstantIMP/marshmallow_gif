@@ -9,6 +9,7 @@
 #define MARSH_THEME "style/main_marshmallow.css"
 #define OR_THEME "style/main_oranje.css"
 
+#include <Magick++.h> 
 #include <gtk/gtk.h>
 #include <string>
 
@@ -25,6 +26,8 @@ void signals_connect();
 void open_gif();
 
 void size_changed();
+
+void set_icons();
 
 // -------------------- Объекты окна --------------------
 
@@ -55,6 +58,8 @@ gif_viewer gif_animation;
 
 int app_init(int *argc, char ***argv){
     gtk_init(argc, argv);
+
+    Magick::InitializeMagick(**argv);
 
     if(!(search_cfg())){
         start_setup();
@@ -152,6 +157,8 @@ static GtkWidget * create_main_window(){
     signals_connect();
 
     set_text_by_lang();
+
+    set_icons();
 
     gtk_window_set_default_size(GTK_WINDOW(main_win), -1, -1);
     gtk_window_set_resizable(GTK_WINDOW(main_win), TRUE);
@@ -266,6 +273,25 @@ void open_gif(){
 
 //
 
+void set_icons(){
+    if(get_param(THEME) == "system") {
+
+    }
+    else if(get_param(THEME) == "marshmallow") {
+        gtk_button_set_image(GTK_BUTTON(speed_re_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_reset.png", NULL), 26, 26, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_down_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_minus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_up_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_plus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(prev_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_prev_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(next_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_next_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(exit_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_exit.png", NULL), 28, 28, GDK_INTERP_HYPER)));
+    }
+    else {
+
+    }
+}
+
+//
+
 void size_changed(){
-    gif_animation.reset();
+    //gif_animation.reset();
 }

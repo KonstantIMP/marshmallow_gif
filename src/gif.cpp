@@ -1,41 +1,24 @@
 #include "../include/gif.hpp"
 
 #include <fstream>
-
+#include <Magick++.h> 
 #include <iostream>
 #include <sstream>
 
-#if defined(linux) || defined(__linux)
-    #include <X11/Xlib.h>
-#elif defined(_WIN32) || defined (_WIN64)
-
-#else
-
-#endif
-
 gif_viewer::gif_viewer(){
-    speed = 100;
-
     play_status = false;
 
     file_name = "";
 
-    #if defined(linux) || defined(__linux)
-        Display* disp = XOpenDisplay(NULL);
+    gtk_init(NULL, NULL);
 
-        Screen*  srcn = DefaultScreenOfDisplay(disp);
+    max_w = gdk_screen_get_width(gdk_screen_get_default());
+    max_h = gdk_screen_get_height(gdk_screen_get_default());
 
-        max_h = srcn->height; max_w = srcn->width;
-
-        delete srcn;
-    #elif defined(_WIN32) || defined (_WIN64)
-
-    #else
-
-    #endif
+    speed_in_procents = 100;
 
     frame_place = NULL;
-    simple_gif_animation = NULL;
+    gif_animation = NULL;
 }
 
 gif_viewer::~gif_viewer(){
@@ -44,44 +27,8 @@ gif_viewer::~gif_viewer(){
 
 void gif_viewer::open_file(std::string name_of_gif){
     file_name = name_of_gif;
-    
-    get_gif_size();
 
-    smart_resize();
-
-    GTimeVal what;
-
-    GdkPixbuf * frame;
-
-    GdkPixbufAnimation * tmp_gif;
-
-    GdkPixbufAnimationIter * gif_iter;
-
-    g_get_current_time(&what);
-
-    tmp_gif = gdk_pixbuf_animation_new_from_file(file_name.c_str(), NULL);
-
-    gif_iter = gdk_pixbuf_animation_get_iter(tmp_gif, &what);
-
-    if(simple_gif_animation != NULL) g_object_unref(simple_gif_animation);
-
-    simple_gif_animation = gdk_pixbuf_simple_anim_new(gif_animation_w, gif_animation_h, 1000 / gdk_pixbuf_animation_iter_get_delay_time(gif_iter));
-
-    gdk_pixbuf_simple_anim_set_loop(simple_gif_animation, TRUE);
-
-    get_number_of_frames();
-
-    for(int i{0}; i < 100; i++){
-        frame = gdk_pixbuf_scale_simple(gdk_pixbuf_animation_iter_get_pixbuf(gif_iter), gif_animation_w, gif_animation_h, GDK_INTERP_NEAREST);
-
-        if(frame == NULL) break;
-
-        g_time_val_add(&what, gdk_pixbuf_animation_iter_get_delay_time(gif_iter) * 1000);
-
-        gdk_pixbuf_simple_anim_add_frame(simple_gif_animation, frame);
-
-        if(gdk_pixbuf_animation_iter_advance(gif_iter,&what) == FALSE) break;
-    }
+    gif_animation = conversion_gif();
 
     gtk_widget_set_size_request(GTK_WIDGET(frame_place), gif_animation_w, gif_animation_h);
 }
@@ -89,7 +36,7 @@ void gif_viewer::open_file(std::string name_of_gif){
 void gif_viewer::set_place(GtkWidget * place_for_animation){
     frame_place = place_for_animation;
 
-    gtk_image_set_from_animation(GTK_IMAGE(place_for_animation), (GdkPixbufAnimation *)simple_gif_animation);
+    gtk_image_set_from_animation(GTK_IMAGE(place_for_animation), gif_animation);
 }
 
 void gif_viewer::play_pause(){
@@ -97,7 +44,8 @@ void gif_viewer::play_pause(){
 }
 
 void gif_viewer::speed_inc(){
-
+    if(speed_in_procents <= 295) speed_in_procents += 5;
+    else speed_in_procents = 5;
 }
 
 void gif_viewer::speed_dec(){
@@ -181,29 +129,57 @@ void gif_viewer::get_gif_size(){
 }
 
 int gif_viewer::get_number_of_frames(){
-    std::ifstream gif_file;
-    gif_file.open(file_name, std::ios::binary);
+    Magick::Image temp;
+    int total_frames = 0;
 
-    unsigned char byte;
+    std::string file_out = file_name + "[-1]";
 
-    int number = 0;
+    temp.ping(file_out.c_str());
+    total_frames = temp.scene() + 1;
 
-    while(gif_file.peek() != EOF){
-        gif_file >> byte;
-
-        if(byte == 0x2c){
-            gif_file >> byte;
-            if(byte == 0xf9) number++;
-        }
-    }
-
-    gif_file.close();
-
-    return number;
+    return total_frames;
 }
 
-void gif_viewer::reset(){
-    if(file_name == "") return;
+GdkPixbufAnimation * gif_viewer::conversion_gif(){
+    get_gif_size();
 
-    open_file(file_name);
+    smart_resize();
+
+    GTimeVal time_pointer;
+
+    GdkPixbuf * frame;
+
+    GdkPixbufAnimation * tmp_gif;
+
+    GdkPixbufSimpleAnim * simple_gif_animation;
+
+    GdkPixbufAnimationIter * frame_pointer; 
+
+    g_get_current_time(&time_pointer);
+
+    tmp_gif = gdk_pixbuf_animation_new_from_file(file_name.c_str(), NULL);
+
+    frame_pointer = gdk_pixbuf_animation_get_iter(tmp_gif, &time_pointer);
+
+    simple_gif_animation = gdk_pixbuf_simple_anim_new(gif_animation_w, gif_animation_h, ((double)(1000 / gdk_pixbuf_animation_iter_get_delay_time(frame_pointer)) / (double)((double)speed_in_procents / 100)));
+
+    gdk_pixbuf_simple_anim_set_loop(simple_gif_animation, TRUE);
+
+    for(int i{0}; i < get_number_of_frames(); i++){
+        frame = gdk_pixbuf_scale_simple(gdk_pixbuf_animation_iter_get_pixbuf(frame_pointer), gif_animation_w, gif_animation_h, GDK_INTERP_NEAREST);
+
+        if(frame == NULL) break;
+
+        g_time_val_add(&time_pointer, gdk_pixbuf_animation_iter_get_delay_time(frame_pointer) * 1000);
+    
+        gdk_pixbuf_simple_anim_add_frame(simple_gif_animation, frame);
+
+        if(gdk_pixbuf_animation_iter_advance(frame_pointer, &time_pointer) == FALSE) break;
+    }
+
+    return (GdkPixbufAnimation *)simple_gif_animation;
+}
+
+int gif_viewer::get_speed_in_procents(){
+    return speed_in_procents;
 }

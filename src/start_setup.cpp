@@ -197,10 +197,6 @@ void set_or_css(){
 void set_lang_by_system(){
     std::string lang = std::locale("").name();
 
-    en = gtk_image_new_from_file("image/en.png");
-
-    ru = gtk_image_new_from_file("image/ru.png");
-
     if(lang == "ru_RU.UTF-8") set_ru();
     else set_en();
 }
@@ -211,7 +207,7 @@ void set_ru(){
     gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
 
     g_object_unref(en);
-    en = gtk_image_new_from_file("image/en.png");
+    en = gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/en.png", NULL), 45, 45, GDK_INTERP_HYPER));
 
     gtk_button_set_image(GTK_BUTTON(lang_btn), en);
     gtk_button_set_label(GTK_BUTTON(lang_btn), "EN");
@@ -251,7 +247,7 @@ void set_en(){
     gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
 
     g_object_unref(ru);
-    ru = gtk_image_new_from_file("image/ru.png");
+    ru = gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/ru.png", NULL), 45, 45, GDK_INTERP_HYPER));
 
     gtk_button_set_image(GTK_BUTTON(lang_btn), ru);
     gtk_button_set_label(GTK_BUTTON(lang_btn), "RU");

@@ -1,0 +1,11 @@
+[PROGRAMM]
+theme=marshmallow
+language=ru
+
+[FILE]
+last_file=remove
+lot_file=last
+
+[ANOTHER]
+easter=dis
+update=dis
