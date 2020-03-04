@@ -1,4 +1,0 @@
-/home/konstantin/Projects/marshmallow_gif/CMakeFiles/rebuild_cache.dir
-/home/konstantin/Projects/marshmallow_gif/CMakeFiles/edit_cache.dir
-/home/konstantin/Projects/marshmallow_gif/CMakeFiles/app.dir
-/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir
