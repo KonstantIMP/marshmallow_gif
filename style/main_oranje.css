@@ -237,3 +237,13 @@
     border-radius: 0px;
     border: 2px solid #ff4d00;
 }
+
+#sep_label{
+    background-color: #363636;
+
+    color: #363636;
+
+    border-top: 2px solid #ff4d00;
+
+    margin: 2px 0px 0px 0px;
+}

@@ -98,6 +98,8 @@ int start_app(queue<std::string> gif_queue){
 
     gtk_main();
 
+    g_object_unref(main_window);
+
     return 0;
 }
 
@@ -278,12 +280,14 @@ void set_icons(){
 
     }
     else if(get_param(THEME) == "marshmallow") {
-        gtk_button_set_image(GTK_BUTTON(speed_re_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_reset.png", NULL), 26, 26, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(option_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_settings.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_play.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_re_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_reset.png", NULL), 30, 30, GDK_INTERP_HYPER)));
         gtk_button_set_image(GTK_BUTTON(speed_down_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_minus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
         gtk_button_set_image(GTK_BUTTON(speed_up_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_plus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
         gtk_button_set_image(GTK_BUTTON(prev_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_prev_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
         gtk_button_set_image(GTK_BUTTON(next_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_next_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
-        gtk_button_set_image(GTK_BUTTON(exit_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_exit.png", NULL), 28, 28, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(exit_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_exit.png", NULL), 30, 30, GDK_INTERP_HYPER)));
     }
     else {
 

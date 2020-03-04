@@ -55,9 +55,6 @@ GtkWidget * down_sep;
 
 GtkCssProvider * setup_css;
 
-GtkWidget * en;
-GtkWidget * ru;
-
 // -------------------- Функция обработчик окна настроек ----------------------
 
 void start_setup(){
@@ -206,10 +203,7 @@ void set_lang_by_system(){
 void set_ru(){
     gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
 
-    g_object_unref(en);
-    en = gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/en.png", NULL), 45, 45, GDK_INTERP_HYPER));
-
-    gtk_button_set_image(GTK_BUTTON(lang_btn), en);
+    gtk_button_set_image(GTK_BUTTON(lang_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/en.png", NULL), 45, 45, GDK_INTERP_HYPER)));
     gtk_button_set_label(GTK_BUTTON(lang_btn), "EN");
     gtk_button_set_image_position(GTK_BUTTON(lang_btn), GTK_POS_LEFT);
 
@@ -246,10 +240,7 @@ void set_ru(){
 void set_en(){
     gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
 
-    g_object_unref(ru);
-    ru = gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/ru.png", NULL), 45, 45, GDK_INTERP_HYPER));
-
-    gtk_button_set_image(GTK_BUTTON(lang_btn), ru);
+    gtk_button_set_image(GTK_BUTTON(lang_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/ru.png", NULL), 45, 45, GDK_INTERP_HYPER)));
     gtk_button_set_label(GTK_BUTTON(lang_btn), "RU");
     gtk_button_set_image_position(GTK_BUTTON(lang_btn), GTK_POS_LEFT);
 
