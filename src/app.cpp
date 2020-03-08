@@ -29,6 +29,12 @@ void size_changed();
 
 void set_icons();
 
+void reset_speed();
+
+void decrement_speed();
+
+void increment_speed();
+
 // -------------------- Объекты окна --------------------
 
 GtkWidget * main_window;
@@ -230,6 +236,9 @@ void set_text_by_lang(){
 // -------------------- Обработка нажатий ----------------------
 
 void signals_connect(){
+    g_signal_connect(G_OBJECT(speed_re_btn), "clicked", G_CALLBACK(reset_speed), NULL);
+    g_signal_connect(G_OBJECT(speed_down_btn), "clicked", G_CALLBACK(decrement_speed), NULL);
+    g_signal_connect(G_OBJECT(speed_up_btn), "clicked", G_CALLBACK(increment_speed), NULL);
     g_signal_connect(G_OBJECT(exit_btn), "clicked", G_CALLBACK(gtk_main_quit), NULL);
     g_signal_connect(G_OBJECT(open_btn), "clicked", G_CALLBACK(open_gif), NULL);
 }
@@ -261,7 +270,12 @@ void open_gif(){
 
     if (resp == GTK_RESPONSE_ACCEPT){
         std::string fname = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
+
         gif_animation.open_file(fname);
+
+        gif_animation.reset_speed();
+
+        gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
     }
 
     gif_animation.set_place(gif_place); 
@@ -290,7 +304,14 @@ void set_icons(){
         gtk_button_set_image(GTK_BUTTON(exit_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_exit.png", NULL), 30, 30, GDK_INTERP_HYPER)));
     }
     else {
-
+        gtk_button_set_image(GTK_BUTTON(option_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_settings.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(exit_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_exit.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_play.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_re_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_reset.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_down_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_minus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_up_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_plus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(prev_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_prev_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(next_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_next_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
     }
 }
 
@@ -298,4 +319,28 @@ void set_icons(){
 
 void size_changed(){
     //gif_animation.reset();
+}
+
+//
+
+void reset_speed(){
+    gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
+
+    if(!gif_animation.reset_speed()) return;
+}
+
+//
+
+void decrement_speed(){
+    if(!gif_animation.speed_dec()) return;
+
+    gtk_label_set_text(GTK_LABEL(speed_indicator_msg), std::string(std::to_string(gif_animation.get_speed_in_procents()) + " %").c_str());
+}
+
+//
+
+void increment_speed(){
+    if(!gif_animation.speed_inc()) return;
+
+    gtk_label_set_text(GTK_LABEL(speed_indicator_msg), std::string(std::to_string(gif_animation.get_speed_in_procents()) + " %").c_str());
 }

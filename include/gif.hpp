@@ -19,11 +19,11 @@ public:
 
     void play_pause();
 
-    void speed_inc();
+    bool speed_inc();
 
-    void speed_dec();
+    bool speed_dec();
 
-    void reset_speed();
+    bool reset_speed();
 
     void next_frame();
 

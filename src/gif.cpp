@@ -43,17 +43,30 @@ void gif_viewer::play_pause(){
 
 }
 
-void gif_viewer::speed_inc(){
-    if(speed_in_procents <= 295) speed_in_procents += 5;
+bool gif_viewer::speed_inc(){
+    if(file_name == "") return false;
+    if(speed_in_procents <= 995) speed_in_procents += 5;
     else speed_in_procents = 5;
+    open_file(file_name);
+    set_place(frame_place);
+    return true;    
 }
 
-void gif_viewer::speed_dec(){
-
+bool gif_viewer::speed_dec(){
+    if(file_name == "") return false;
+    if(speed_in_procents > 5) speed_in_procents -= 5;
+    else speed_in_procents = 1000;
+    open_file(file_name);
+    set_place(frame_place);
+    return true;
 }
 
-void gif_viewer::reset_speed(){
-
+bool gif_viewer::reset_speed(){
+    speed_in_procents = 100;
+    if(file_name == "") return false;
+    open_file(file_name);
+    set_place(frame_place);
+    return true;
 }
 
 void gif_viewer::previous_frame(){
@@ -85,31 +98,12 @@ void gif_viewer::smart_resize(){
 
     int tmp_w, tmp_h;
 
-    if(gif_animation_w < (gif_place_w - 5) && gif_animation_h < (gif_place_h - 5)){
-        if(gif_animation_w > gif_animation_h){
-            tmp_w = gif_animation_w;
-
-            gif_animation_w = gif_place_w - 5;
-
-            gif_animation_h = (gif_animation_h * gif_animation_w) / tmp_w;
-        }
-        else{
-            tmp_h = gif_animation_h;
-
-            gif_animation_h = gif_place_h - 5;
-
-            gif_animation_w = (gif_animation_w * gif_animation_h) / tmp_h;
-        }
-    }
-    else if(gif_animation_w > (max_w - 50) || gif_animation_h > (max_h - 100)){
-
-    }
-    else{
-
-    }
+    
 }
 
 void gif_viewer::get_gif_size(){
+    if(file_name == "")return;
+
     std::ifstream gif_file;
     gif_file.open(file_name, std::ios::binary);
 
@@ -129,6 +123,8 @@ void gif_viewer::get_gif_size(){
 }
 
 int gif_viewer::get_number_of_frames(){
+    if(file_name == "")return 0;
+
     Magick::Image temp;
     int total_frames = 0;
 
@@ -141,6 +137,8 @@ int gif_viewer::get_number_of_frames(){
 }
 
 GdkPixbufAnimation * gif_viewer::conversion_gif(){
+    if(file_name == "")return NULL;
+
     get_gif_size();
 
     smart_resize();
@@ -161,7 +159,7 @@ GdkPixbufAnimation * gif_viewer::conversion_gif(){
 
     frame_pointer = gdk_pixbuf_animation_get_iter(tmp_gif, &time_pointer);
 
-    simple_gif_animation = gdk_pixbuf_simple_anim_new(gif_animation_w, gif_animation_h, ((double)(1000 / gdk_pixbuf_animation_iter_get_delay_time(frame_pointer)) / (double)((double)speed_in_procents / 100)));
+    simple_gif_animation = gdk_pixbuf_simple_anim_new(gif_animation_w, gif_animation_h, 1000 / ((double)gdk_pixbuf_animation_iter_get_delay_time(frame_pointer) * 100 / (double)speed_in_procents)); //((double)(1000 / gdk_pixbuf_animation_iter_get_delay_time(frame_pointer)) / (double)((double)speed_in_procents / 100)));
 
     gdk_pixbuf_simple_anim_set_loop(simple_gif_animation, TRUE);
 
