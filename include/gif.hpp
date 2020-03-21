@@ -17,7 +17,9 @@ public:
 
     void set_place(GtkWidget *);
 
-    void play_pause();
+    bool play_pause();
+
+    bool get_play();
 
     bool speed_inc();
 
@@ -48,10 +50,9 @@ private:
 
     bool play_status;
 
-    int max_h;
-    int max_w;
-
     int  gif_animation_h, gif_animation_w;
+
+    int num_frame;
 
     void get_gif_size();
 

@@ -35,6 +35,14 @@ void decrement_speed();
 
 void increment_speed();
 
+void change_status();
+
+void frame_plus();
+
+void frame_minus();
+
+void pp_btn_icon();
+
 // -------------------- Объекты окна --------------------
 
 GtkWidget * main_window;
@@ -158,7 +166,7 @@ static GtkWidget * create_main_window(){
 
     gif_place = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "gif_place"));
 
-    gtk_widget_set_size_request(GTK_WIDGET(gif_place), 400, 400);
+    gtk_widget_set_size_request(GTK_WIDGET(gif_place), 587, 400);
 
     connect_main_css();
 
@@ -177,6 +185,7 @@ static GtkWidget * create_main_window(){
     g_signal_connect(GTK_WIDGET(main_win), "size-allocate", G_CALLBACK(size_changed), NULL);
 
     g_object_unref(main_win_builder);
+    g_error_free(err_msg);
 
     gtk_container_set_border_width(GTK_CONTAINER(main_win), 5);
 
@@ -239,8 +248,11 @@ void signals_connect(){
     g_signal_connect(G_OBJECT(speed_re_btn), "clicked", G_CALLBACK(reset_speed), NULL);
     g_signal_connect(G_OBJECT(speed_down_btn), "clicked", G_CALLBACK(decrement_speed), NULL);
     g_signal_connect(G_OBJECT(speed_up_btn), "clicked", G_CALLBACK(increment_speed), NULL);
-    g_signal_connect(G_OBJECT(exit_btn), "clicked", G_CALLBACK(gtk_main_quit), NULL);
+    g_signal_connect(G_OBJECT(exit_btn), "clicked", G_CALLBACK(exit), NULL);
     g_signal_connect(G_OBJECT(open_btn), "clicked", G_CALLBACK(open_gif), NULL);
+    g_signal_connect(G_OBJECT(play_btn), "clicked", G_CALLBACK(change_status), NULL);
+    g_signal_connect(G_OBJECT(next_image_btn), "clicked", G_CALLBACK(frame_plus), NULL);
+    g_signal_connect(G_OBJECT(prev_image_btn), "clicked", G_CALLBACK(frame_minus), NULL);
 }
 
 // -------------------- Открытие gif анимации --------------------
@@ -271,9 +283,9 @@ void open_gif(){
     if (resp == GTK_RESPONSE_ACCEPT){
         std::string fname = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
 
-        gif_animation.open_file(fname);
+        gif_animation.unref_gif();
 
-        gif_animation.reset_speed();
+        gif_animation.open_file(fname);
 
         gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
     }
@@ -285,6 +297,10 @@ void open_gif(){
     gtk_widget_destroy(dialog);
 
     gtk_window_resize(GTK_WINDOW(main_window), 1, 1);
+
+    pp_btn_icon();
+
+    g_object_unref(dialog);
 }
 
 //
@@ -327,6 +343,8 @@ void reset_speed(){
     gtk_label_set_text(GTK_LABEL(speed_indicator_msg), "100 %");
 
     if(!gif_animation.reset_speed()) return;
+
+    pp_btn_icon();
 }
 
 //
@@ -335,6 +353,8 @@ void decrement_speed(){
     if(!gif_animation.speed_dec()) return;
 
     gtk_label_set_text(GTK_LABEL(speed_indicator_msg), std::string(std::to_string(gif_animation.get_speed_in_procents()) + " %").c_str());
+
+    pp_btn_icon();
 }
 
 //
@@ -343,4 +363,45 @@ void increment_speed(){
     if(!gif_animation.speed_inc()) return;
 
     gtk_label_set_text(GTK_LABEL(speed_indicator_msg), std::string(std::to_string(gif_animation.get_speed_in_procents()) + " %").c_str());
+
+    pp_btn_icon();
+}
+
+//
+
+void change_status(){
+    if(gif_animation.play_pause() == false) return;
+
+    pp_btn_icon();
+}
+
+//
+
+void frame_plus(){
+    gif_animation.next_frame();
+
+    pp_btn_icon();
+}
+
+//
+
+void frame_minus(){
+    gif_animation.previous_frame();
+
+    pp_btn_icon();
+}
+
+
+void pp_btn_icon(){
+    if(gif_animation.get_play() == true){
+        if(get_param(THEME) == "system") gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_play.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        else if(get_param(THEME) == "marshmallow") gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_play.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        else gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_play.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+
+    }
+    else{
+        if(get_param(THEME) == "system") gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_pause.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        else if(get_param(THEME) == "marshmallow") gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_pause.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        else gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_pause.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+    }
 }

@@ -11,7 +11,8 @@ LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS})
 
 ADD_DEFINITIONS(${GTK3_CFLAGS_OTHER})
 
-find_package(ImageMagick COMPONENTS Magick++)
+find_package(ImageMagick COMPONENTS Magick++ MagickCore)
+
 include_directories(${ImageMagick_INCLUDE_DIRS})
 
 set(SOURCE_EXE  src/main.cpp

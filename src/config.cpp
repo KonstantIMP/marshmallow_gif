@@ -67,7 +67,7 @@ void create_cfg(std::string theme,
 }
 
 std::string get_param(char param_num){
-    if(!(search_cfg)) return "Config wasn`t defined";
+    if(!(search_cfg())) return "Config wasn`t defined";
 
     std::ifstream cfg(CFG_PATH);
 
