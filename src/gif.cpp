@@ -14,7 +14,6 @@ gif_viewer::gif_viewer(){
     speed_in_procents = 100;
 
     frame_place = NULL;
-    gif_animation = NULL;
 }
 
 gif_viewer::~gif_viewer(){
@@ -26,8 +25,6 @@ void gif_viewer::open_file(std::string name_of_gif){
 
     file_name = name_of_gif;
 
-    gif_animation = conversion_gif();
-
     play_status = true;
 }
 
@@ -36,7 +33,7 @@ void gif_viewer::set_place(GtkWidget * place_for_animation){
 
     if(file_name == "") return;
 
-    gtk_image_set_from_animation(GTK_IMAGE(place_for_animation), gif_animation);
+    gtk_image_set_from_animation(GTK_IMAGE(place_for_animation), conversion_gif());
 }
 
 bool gif_viewer::play_pause(){
@@ -172,7 +169,7 @@ void gif_viewer::next_frame(){
 }
 
 void gif_viewer::unref_gif(){
-    g_object_unref(gif_animation);
+    g_object_unref(simple_gif_animation);
 }
 
 void gif_viewer::smart_resize(){
@@ -248,13 +245,13 @@ GdkPixbufAnimation * gif_viewer::conversion_gif(){
 
     smart_resize();
 
+    unref_gif();
+
     GTimeVal time_pointer;
 
     GdkPixbuf * frame;
 
     GdkPixbufAnimation * tmp_gif;
-
-    GdkPixbufSimpleAnim * simple_gif_animation;
 
     GdkPixbufAnimationIter * frame_pointer; 
 

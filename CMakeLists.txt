@@ -17,7 +17,8 @@ include_directories(${ImageMagick_INCLUDE_DIRS})
 
 set(SOURCE_EXE  src/main.cpp
                 src/app.cpp
-                src/start_setup.cpp)
+                src/start_setup.cpp
+                src/setting.cpp)
 
 set(SOURCE_LIB  src/config.cpp
                 src/gif.cpp)

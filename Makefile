@@ -244,6 +244,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/setting.o: src/setting.cpp.o
+
+.PHONY : src/setting.o
+
+# target to build an object file
+src/setting.cpp.o:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o
+.PHONY : src/setting.cpp.o
+
+src/setting.i: src/setting.cpp.i
+
+.PHONY : src/setting.i
+
+# target to preprocess a source file
+src/setting.cpp.i:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/setting.cpp.i
+.PHONY : src/setting.cpp.i
+
+src/setting.s: src/setting.cpp.s
+
+.PHONY : src/setting.s
+
+# target to generate assembly for a file
+src/setting.cpp.s:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/setting.cpp.s
+.PHONY : src/setting.cpp.s
+
 src/start_setup.o: src/start_setup.cpp.o
 
 .PHONY : src/start_setup.o
@@ -293,6 +320,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/setting.o"
+	@echo "... src/setting.i"
+	@echo "... src/setting.s"
 	@echo "... src/start_setup.o"
 	@echo "... src/start_setup.i"
 	@echo "... src/start_setup.s"

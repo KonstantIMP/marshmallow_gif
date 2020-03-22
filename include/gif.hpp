@@ -44,7 +44,7 @@ private:
 
     GtkWidget * frame_place;
 
-    GdkPixbufAnimation * gif_animation;
+    GdkPixbufSimpleAnim * simple_gif_animation;
 
     int speed_in_procents;
 

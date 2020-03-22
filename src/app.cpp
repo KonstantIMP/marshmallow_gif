@@ -1,4 +1,5 @@
 #include "../include/start_setup.hpp"
+#include "../include/setting.hpp"
 #include "../include/config.hpp"
 #include "../include/gif.hpp"
 #include "../include/app.hpp"
@@ -42,6 +43,8 @@ void frame_plus();
 void frame_minus();
 
 void pp_btn_icon();
+
+void setting_programm();
 
 // -------------------- Объекты окна --------------------
 
@@ -140,14 +143,14 @@ static GtkWidget * create_main_window(){
 
     main_win = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "main_win"));
 
-    gtk_window_set_icon_from_file(GTK_WINDOW(main_win), "image/candy.png", NULL);
-    gtk_window_set_title(GTK_WINDOW(main_win), "marshmallow_gif");
-
     if(!(main_win)){
         g_critical("Unable to load window");
 
         exit(21);
     }
+
+    gtk_window_set_icon_from_file(GTK_WINDOW(main_win), "image/candy.png", NULL);
+    gtk_window_set_title(GTK_WINDOW(main_win), "marshmallow_gif");
 
     exit_btn = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "exit"));
     option_btn = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "option"));
@@ -185,7 +188,8 @@ static GtkWidget * create_main_window(){
     g_signal_connect(GTK_WIDGET(main_win), "size-allocate", G_CALLBACK(size_changed), NULL);
 
     g_object_unref(main_win_builder);
-    g_error_free(err_msg);
+    g_object_unref(main_css);
+    if(err_msg != NULL) g_error_free(err_msg);
 
     gtk_container_set_border_width(GTK_CONTAINER(main_win), 5);
 
@@ -253,6 +257,7 @@ void signals_connect(){
     g_signal_connect(G_OBJECT(play_btn), "clicked", G_CALLBACK(change_status), NULL);
     g_signal_connect(G_OBJECT(next_image_btn), "clicked", G_CALLBACK(frame_plus), NULL);
     g_signal_connect(G_OBJECT(prev_image_btn), "clicked", G_CALLBACK(frame_minus), NULL);
+    g_signal_connect(G_OBJECT(option_btn), "clicked", G_CALLBACK(setting_programm), NULL);
 }
 
 // -------------------- Открытие gif анимации --------------------
@@ -404,4 +409,10 @@ void pp_btn_icon(){
         else if(get_param(THEME) == "marshmallow") gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_pause.png", NULL), 30, 30, GDK_INTERP_HYPER)));
         else gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/o_pause.png", NULL), 30, 30, GDK_INTERP_HYPER)));
     }
+}
+
+//
+
+void setting_programm(){
+    open_setting_win();
 }

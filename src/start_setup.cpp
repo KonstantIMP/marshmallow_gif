@@ -133,6 +133,7 @@ static GtkWidget * create_window(){
     set_lang_by_system();
 
     g_object_unref(setup_win_builder);
+    g_object_unref(setup_css);
 
     gtk_container_set_border_width(GTK_CONTAINER(setup_win), 7);
 
@@ -203,7 +204,7 @@ void set_lang_by_system(){
 void set_ru(){
     gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
 
-    gtk_button_set_image(GTK_BUTTON(lang_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/en.png", NULL), 45, 45, GDK_INTERP_HYPER)));
+    gtk_button_set_image(GTK_BUTTON(lang_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/en.png", NULL), 40, 40, GDK_INTERP_HYPER)));
     gtk_button_set_label(GTK_BUTTON(lang_btn), "EN");
     gtk_button_set_image_position(GTK_BUTTON(lang_btn), GTK_POS_LEFT);
 
@@ -240,7 +241,7 @@ void set_ru(){
 void set_en(){
     gtk_button_set_image(GTK_BUTTON(lang_btn), NULL);
 
-    gtk_button_set_image(GTK_BUTTON(lang_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/ru.png", NULL), 45, 45, GDK_INTERP_HYPER)));
+    gtk_button_set_image(GTK_BUTTON(lang_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/ru.png", NULL), 40, 40, GDK_INTERP_HYPER)));
     gtk_button_set_label(GTK_BUTTON(lang_btn), "RU");
     gtk_button_set_image_position(GTK_BUTTON(lang_btn), GTK_POS_LEFT);
 
