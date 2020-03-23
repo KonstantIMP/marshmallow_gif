@@ -124,7 +124,6 @@
           <object class="GtkComboBoxText" id="update_combo">
             <property name="name">update_combo</property>
             <property name="visible">True</property>
-            <property name="sensitive">False</property>
             <property name="can_focus">False</property>
           </object>
           <packing>
@@ -134,7 +133,16 @@
           </packing>
         </child>
         <child>
-          <placeholder/>
+          <object class="GtkButton" id="cancel_btn">
+            <property name="name">cancel_btn</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">5</property>
+          </packing>
         </child>
         <child>
           <placeholder/>

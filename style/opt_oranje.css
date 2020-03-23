@@ -1,0 +1,196 @@
+#setting_win{
+    background-color: #363636;
+}
+
+#setting_msg{
+    color: white;
+
+    font-size: 25px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    margin-bottom: 8px;
+}
+
+#theme_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4d00;
+    border-right: 0px;
+    border-radius: 0px;
+}
+
+#theme_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4400;
+    border-left: 0px;
+    border-radius: 0px;
+}
+
+#lang_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4d00;
+    border-right: 0px;
+    border-radius: 0px;
+}
+
+#lang_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4400;
+    border-left: 0px;
+    border-radius: 0px;
+}
+
+#lot_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4d00;
+    border-right: 0px;
+    border-radius: 0px;
+}
+
+#lot_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4400;
+    border-left: 0px;
+    border-radius: 0px;
+}
+
+#update_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4d00;
+    border-right: 0px;
+    border-radius: 0px;
+}
+#update_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "DejaVu Sans", "Georgia";
+
+    border: 2px solid #dd4400;
+    border-left: 0px;
+    border-radius: 0px;
+}
+
+menuitem {
+    background: #363636;
+
+    color: white;
+}
+
+menuitem:hover{
+    background: #dd4d00;
+}
+
+.combo{
+    background: #363636;
+
+    color: white;
+}
+
+#ok_btn{
+    font-family: "DejaVu Sans", "Georgia";
+    font-size: 14px;
+
+    background-color: #363636;
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+
+    margin: 5px;
+}
+
+#ok_btn:hover{
+    background-color: #ff4d00;
+
+    border-color: #363636;
+}
+
+#ok_btn:active{
+    background-color: #ffffff;
+
+    color: #ff4d00;
+
+    border-color: #363636;
+}
+
+#cancel_btn{
+    font-family: "DejaVu Sans", "Georgia";
+    font-size: 14px;
+
+    background-color: #363636;
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+
+    margin: 5px;
+}
+
+#cancel_btn:hover{
+    background-color: #ff4d00;
+
+    border-color: #363636;
+}
+
+#cancel_btn:active{
+    background-color: #ffffff;
+
+    color: #ff4d00;
+
+    border-color: #363636;
+}

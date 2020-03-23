@@ -60,8 +60,9 @@ void create_cfg(std::string theme,
     if(easter_en == STANDART) cfg << "easter=dis\n";
     else cfg << "easter=en\n";
 
-    if(auto_update == STANDART) cfg << "update=dis\n";
-    else cfg << "update=en";
+    if(auto_update == STANDART || auto_update == "dis") cfg << "update=dis\n";
+    else if(auto_update == "ask") cfg << "update=ask";
+    else cfg << "update=auto";
 
     cfg.close();
 }

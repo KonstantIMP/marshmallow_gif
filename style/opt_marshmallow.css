@@ -1,3 +1,197 @@
 #setting_win{
     background-color: #2d313d;
 }
+
+#setting_msg{
+    color: white;
+
+    font-size: 25px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    margin-bottom: 8px;
+}
+
+#theme_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#theme_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-left: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#lang_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#lang_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-left: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#lot_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#lot_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-left: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#update_msg{
+    margin: 2px 0px 2px 6px;
+
+    color:white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#update_combo{
+    margin: 2px 6px 2px 0px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-family: "Comic Sans MS", "Arial", "Hack";
+
+    border: 2px solid #e8324f;
+    border-left: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+menuitem {
+    background: #2d313d;
+
+    color: white;
+}
+
+menuitem:hover{
+    background: #e8324f;
+}
+
+.combo{
+    background: #2d313d;
+
+    color: white;
+}
+
+#ok_btn{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 14px;
+
+    background-color: #2d313d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+    border: 2px solid #e8324f;
+
+    margin: 5px;
+}
+
+#ok_btn:hover{
+    background-color: #ffffff;
+
+    color: #2d313d;
+}
+
+#ok_btn:active{
+    background-color: #ffffff;
+
+    color: #e8324f;
+
+    border-color: #ffffff;
+}
+
+#cancel_btn{
+    font-family: "Comic Sans MS", "Arial", "Hack";
+    font-size: 14px;
+
+    background-color: #2d313d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+    border: 2px solid #e8324f;
+
+    margin: 5px;
+}
+
+#cancel_btn:hover{
+    background-color: #ffffff;
+
+    color: #2d313d;
+}
+
+#cancel_btn:active{
+    background-color: #ffffff;
+
+    color: #e8324f;
+
+    border-color: #ffffff;
+}
