@@ -169,7 +169,7 @@ static GtkWidget * create_main_window(){
 
     gif_place = GTK_WIDGET(gtk_builder_get_object(main_win_builder, "gif_place"));
 
-    gtk_widget_set_size_request(GTK_WIDGET(gif_place), 587, 400);
+    gtk_widget_set_size_request(GTK_WIDGET(gif_place), 400, 400);
 
     connect_main_css();
 
@@ -339,7 +339,18 @@ void set_icons(){
 //
 
 void size_changed(){
-    //gif_animation.reset();
+    gtk_image_clear(GTK_IMAGE(gif_place));
+
+    gif_animation.unref_gif();
+
+    if(gif_animation.get_play() == false) {  
+        gif_animation.set_place(gif_place);   
+    }
+    else {        
+        gif_animation.set_place(gif_place);
+    }
+
+    pp_btn_icon();
 }
 
 //

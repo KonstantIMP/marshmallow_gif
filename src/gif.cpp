@@ -180,7 +180,14 @@ void gif_viewer::smart_resize(){
 
     get_gif_size();
 
-    gtk_widget_get_size_request(GTK_WIDGET(frame_place), &gif_place_w, &gif_place_h);
+    GtkAllocation * place_alloc = g_new(GtkAllocation, 1);
+
+    gtk_widget_get_allocation(GTK_WIDGET(frame_place), place_alloc);
+
+    gif_place_h = place_alloc->height;
+    gif_place_w = place_alloc->width;
+
+    g_free(place_alloc);
 
     int tmp_w, tmp_h;
 
@@ -281,6 +288,8 @@ GdkPixbufAnimation * gif_viewer::conversion_gif(){
     g_object_unref(frame);
     g_object_unref(tmp_gif);
     g_object_unref(frame_pointer);
+
+    play_status = true;
 
     return (GdkPixbufAnimation *)simple_gif_animation;
 }
