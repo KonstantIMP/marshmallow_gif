@@ -1,13 +1,5 @@
-#include <gtk/gtk.h>
-
-#include <iostream>
-#include <fstream>
-#include <locale>    
-#include <cstdio>
 #include <string>
-#include "../include/app.hpp"
-#include "../include/config.hpp"
-#include "../include/start_setup.hpp"
+#include "../include/init.hpp"
 
 #include "../lib/queue.hpp"
 

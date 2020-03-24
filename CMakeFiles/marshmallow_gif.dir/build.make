@@ -87,65 +87,109 @@ CMakeFiles/marshmallow_gif.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/main.cpp -o CMakeFiles/marshmallow_gif.dir/src/main.cpp.s
 
-CMakeFiles/marshmallow_gif.dir/src/app.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
-CMakeFiles/marshmallow_gif.dir/src/app.cpp.o: src/app.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/app.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/app.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/app.cpp
+CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
+CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o: src/gtk_app.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/gtk_app.cpp
 
-CMakeFiles/marshmallow_gif.dir/src/app.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/app.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/app.cpp > CMakeFiles/marshmallow_gif.dir/src/app.cpp.i
+CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/gtk_app.cpp > CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.i
 
-CMakeFiles/marshmallow_gif.dir/src/app.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/app.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/app.cpp -o CMakeFiles/marshmallow_gif.dir/src/app.cpp.s
+CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/gtk_app.cpp -o CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.s
 
-CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
-CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o: src/start_setup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/start_setup.cpp
+CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
+CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o: src/gtk_start_setup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/gtk_start_setup.cpp
 
-CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/start_setup.cpp > CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.i
+CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/gtk_start_setup.cpp > CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.i
 
-CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/start_setup.cpp -o CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.s
+CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/gtk_start_setup.cpp -o CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.s
 
-CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
-CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o: src/setting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/setting.cpp
+CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
+CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o: src/gtk_setting.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/gtk_setting.cpp
 
-CMakeFiles/marshmallow_gif.dir/src/setting.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/setting.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/setting.cpp > CMakeFiles/marshmallow_gif.dir/src/setting.cpp.i
+CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/gtk_setting.cpp > CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.i
 
-CMakeFiles/marshmallow_gif.dir/src/setting.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/setting.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/setting.cpp -o CMakeFiles/marshmallow_gif.dir/src/setting.cpp.s
+CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/gtk_setting.cpp -o CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.s
+
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: src/init.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/init.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/init.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/init.cpp
+
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/init.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/init.cpp > CMakeFiles/marshmallow_gif.dir/src/init.cpp.i
+
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/init.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/init.cpp -o CMakeFiles/marshmallow_gif.dir/src/init.cpp.s
+
+CMakeFiles/marshmallow_gif.dir/src/config.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
+CMakeFiles/marshmallow_gif.dir/src/config.cpp.o: src/config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/config.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/config.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/config.cpp
+
+CMakeFiles/marshmallow_gif.dir/src/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/config.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/config.cpp > CMakeFiles/marshmallow_gif.dir/src/config.cpp.i
+
+CMakeFiles/marshmallow_gif.dir/src/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/config.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/config.cpp -o CMakeFiles/marshmallow_gif.dir/src/config.cpp.s
+
+CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o: CMakeFiles/marshmallow_gif.dir/flags.make
+CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o: src/gtk_gif.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp
+
+CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp > CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.i
+
+CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp -o CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.s
 
 # Object files for target marshmallow_gif
 marshmallow_gif_OBJECTS = \
 "CMakeFiles/marshmallow_gif.dir/src/main.cpp.o" \
-"CMakeFiles/marshmallow_gif.dir/src/app.cpp.o" \
-"CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o" \
-"CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o"
+"CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o" \
+"CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o" \
+"CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o" \
+"CMakeFiles/marshmallow_gif.dir/src/init.cpp.o" \
+"CMakeFiles/marshmallow_gif.dir/src/config.cpp.o" \
+"CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o"
 
 # External object files for target marshmallow_gif
 marshmallow_gif_EXTERNAL_OBJECTS =
 
 marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/main.cpp.o
-marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/app.cpp.o
-marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o
-marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o
+marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o
+marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o
+marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o
+marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/init.cpp.o
+marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/config.cpp.o
+marshmallow_gif: CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o
 marshmallow_gif: CMakeFiles/marshmallow_gif.dir/build.make
-marshmallow_gif: libapp.a
 marshmallow_gif: /usr/lib/libMagick++-7.Q16HDRI.so
 marshmallow_gif: /usr/lib/libMagickCore-7.Q16HDRI.so
 marshmallow_gif: CMakeFiles/marshmallow_gif.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable marshmallow_gif"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable marshmallow_gif"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/marshmallow_gif.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,4 +1,4 @@
-#include "../include/gif.hpp"
+#include "../include/gtk_gif.hpp"
 
 #include <Magick++.h> 
 #include <iostream>

@@ -1,4 +1,4 @@
-#include "../include/start_setup.hpp"
+#include "../include/gtk_start_setup.hpp"
 #include "../include/config.hpp"
 
 #define START_SETUP_FORM "form/start_setup.glade"
@@ -57,7 +57,7 @@ GtkCssProvider * setup_css;
 
 // -------------------- Функция обработчик окна настроек ----------------------
 
-void start_setup(){
+void gtk_start_setup(){
     theme_s = "sys";
 
     window = create_window();
@@ -302,7 +302,7 @@ void end_setup(){
     if(lang[0] == 'E' && lang[1] == 'N') language = "ru";
     else language = "en";
 
-    create_cfg(theme_s, language, STANDART, STANDART, STANDART, STANDART);
+    create_cfg("gtk", theme_s, language, STANDART, STANDART, STANDART, STANDART);
 
     gtk_main_quit();
 }

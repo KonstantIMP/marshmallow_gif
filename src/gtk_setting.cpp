@@ -1,5 +1,5 @@
-#include "../include/setting.hpp"
-#include "../include//config.hpp"
+#include "../include/gtk_setting.hpp"
+#include "../include/config.hpp"
 
 #include <gtk/gtk.h>
 
@@ -258,7 +258,7 @@ void rewrite_config(){
 
     delete_cfg();
 
-    create_cfg(theme_p, lang_p, STANDART, STANDART, lot_p, update_p);
+    create_cfg("gtk", theme_p, lang_p, STANDART, STANDART, lot_p, update_p);
 
     GtkWidget * warning_dialog;
 

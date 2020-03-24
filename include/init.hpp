@@ -1,5 +1,5 @@
-#ifndef APP_HPP
-#define APP_HPP
+#ifndef INCLUDE_HPP
+#define INCLUDE_HPP
 
 #include "../lib/queue.hpp"
 

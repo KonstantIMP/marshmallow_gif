@@ -6,12 +6,30 @@
 
 #IncludeRegexTransform: 
 
+/home/konstantin/Projects/marshmallow_gif/include/config.hpp
+string
+-
+
 /home/konstantin/Projects/marshmallow_gif/include/gif.hpp
 gdk-pixbuf/gdk-pixbuf.h
 -
 gtk/gtk.h
 -
 glib.h
+-
+string
+-
+
+/home/konstantin/Projects/marshmallow_gif/src/config.cpp
+../include/config.hpp
+/home/konstantin/Projects/marshmallow_gif/include/config.hpp
+gtk/gtk.h
+-
+fstream
+-
+cstring
+-
+cstdio
 -
 string
 -

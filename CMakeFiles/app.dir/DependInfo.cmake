@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/konstantin/Projects/marshmallow_gif/src/config.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/app.dir/src/config.cpp.o"
-  "/home/konstantin/Projects/marshmallow_gif/src/gif.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/app.dir/src/gif.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/app.dir/src/gtk_gif.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

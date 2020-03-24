@@ -1,0 +1,12 @@
+[PROGRAMM]
+gui=gtk
+theme=oranje
+language=ru
+
+[FILE]
+last_file=remove
+lot_file=last
+
+[ANOTHER]
+easter=dis
+update=dis

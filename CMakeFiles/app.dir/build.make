@@ -87,29 +87,29 @@ CMakeFiles/app.dir/src/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/config.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/config.cpp -o CMakeFiles/app.dir/src/config.cpp.s
 
-CMakeFiles/app.dir/src/gif.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/gif.cpp.o: src/gif.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/gif.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/gif.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/gif.cpp
+CMakeFiles/app.dir/src/gtk_gif.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/gtk_gif.cpp.o: src/gtk_gif.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/gtk_gif.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/gtk_gif.cpp.o -c /home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp
 
-CMakeFiles/app.dir/src/gif.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/gif.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/gif.cpp > CMakeFiles/app.dir/src/gif.cpp.i
+CMakeFiles/app.dir/src/gtk_gif.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/gtk_gif.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp > CMakeFiles/app.dir/src/gtk_gif.cpp.i
 
-CMakeFiles/app.dir/src/gif.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/gif.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/gif.cpp -o CMakeFiles/app.dir/src/gif.cpp.s
+CMakeFiles/app.dir/src/gtk_gif.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/gtk_gif.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp -o CMakeFiles/app.dir/src/gtk_gif.cpp.s
 
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/src/config.cpp.o" \
-"CMakeFiles/app.dir/src/gif.cpp.o"
+"CMakeFiles/app.dir/src/gtk_gif.cpp.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
 libapp.a: CMakeFiles/app.dir/src/config.cpp.o
-libapp.a: CMakeFiles/app.dir/src/gif.cpp.o
+libapp.a: CMakeFiles/app.dir/src/gtk_gif.cpp.o
 libapp.a: CMakeFiles/app.dir/build.make
 libapp.a: CMakeFiles/app.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/konstantin/Projects/marshmallow_gif/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libapp.a"

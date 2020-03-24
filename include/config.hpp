@@ -11,12 +11,14 @@
 #define LAST 3
 #define LOTS 4
 #define UPDATE 5
+#define GUI 6
 
 bool search_cfg();
 
 bool delete_cfg();
 
 void create_cfg(std::string,
+                std::string,
                 std::string,
                 std::string,
                 std::string,

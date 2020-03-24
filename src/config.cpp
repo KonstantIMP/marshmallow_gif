@@ -10,7 +10,7 @@
 #if defined(linux) || defined(__linux)
     #define CFG_PATH  "marshmallow_gif.txt"
 #elif defined(_WIN32) || defined (_WIN64)
-    #define CFG_PATH ""
+    #define CFG_PATH "marshmallow_gif.txt"
 #else
     #define CFG_PATH ""
 #endif
@@ -26,7 +26,8 @@ bool delete_cfg(){
     else return false;
 }
 
-void create_cfg(std::string theme,
+void create_cfg(std::string gui,
+                std::string theme,
                 std::string language,
                 std::string easter_en,
                 std::string last_file_mode,
@@ -35,6 +36,9 @@ void create_cfg(std::string theme,
     std::ofstream cfg(CFG_PATH, std::ios_base::trunc);
 
     cfg << "[PROGRAMM]\n";
+
+    if(gui == "qt") cfg << "gui=qt\n";
+    else    cfg << "gui=gtk\n";
 
     if(theme == "sys" || theme == STANDART) cfg << "theme=system\n";
     else if(theme == "marsh") cfg << "theme=marshmallow\n";
@@ -106,6 +110,11 @@ std::string get_param(char param_num){
                     return tmp.substr(9, tmp.length() - 9);
                 }
                 break;
+            case GUI:
+                if(tmp.substr(0, 3) == "gui"){
+                    cfg.close();
+                    return tmp.substr(4, tmp.length() - 4);
+                }
             default:
                 if(tmp.substr(0, 6) == "update"){
                     cfg.close();

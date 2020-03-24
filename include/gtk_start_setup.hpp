@@ -1,6 +1,6 @@
 #ifndef START_SETUP_HPP
 #define START_SETUP_HPP
 
-void start_setup();
+void gtk_start_setup();
 
 #endif

@@ -1,8 +1,8 @@
-#include "../include/start_setup.hpp"
-#include "../include/setting.hpp"
+#include "../include/gtk_start_setup.hpp"
+#include "../include/gtk_setting.hpp"
 #include "../include/config.hpp"
-#include "../include/gif.hpp"
-#include "../include/app.hpp"
+#include "../include/gtk_gif.hpp"
+#include "../include/gtk_app.hpp"
 
 #define MAIN_WIN_FROM "form/main_win.glade"
 
@@ -73,29 +73,17 @@ gif_viewer gif_animation;
 
 // -------------------- Инициализация приложения --------------------
 
-int app_init(int *argc, char ***argv){
+int gtk_app_init(int *argc, char ***argv){
     gtk_init(argc, argv);
 
     Magick::InitializeMagick(**argv);
-
-    if(!(search_cfg())){
-        start_setup();
-
-        if(!(search_cfg())) return 2;
-    }
-
-    // ---------- will be latest ----------
-        //if(get_param(UPDATE) == "en"){
-          //  update_programm();
-        //}
-    // ------------------------------------
 
     return 0;
 }
 
 // -------------------- Запуск приложения --------------------
 
-int start_app(queue<std::string> gif_queue){
+int gtk_start_app(queue<std::string> gif_queue){
     main_window = create_main_window();
 
     if(gif_queue.get_size() != 0){

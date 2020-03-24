@@ -4,10 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/konstantin/Projects/marshmallow_gif/src/app.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/app.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/config.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/config.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/gtk_app.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/gtk_gif.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/gtk_setting.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/gtk_start_setup.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/init.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/init.cpp.o"
   "/home/konstantin/Projects/marshmallow_gif/src/main.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/main.cpp.o"
-  "/home/konstantin/Projects/marshmallow_gif/src/setting.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o"
-  "/home/konstantin/Projects/marshmallow_gif/src/start_setup.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -38,7 +41,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/app.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

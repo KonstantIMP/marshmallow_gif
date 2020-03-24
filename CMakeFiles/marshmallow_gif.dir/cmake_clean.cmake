@@ -1,8 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/marshmallow_gif.dir/src/app.cpp.o"
+  "CMakeFiles/marshmallow_gif.dir/src/config.cpp.o"
+  "CMakeFiles/marshmallow_gif.dir/src/gtk_app.cpp.o"
+  "CMakeFiles/marshmallow_gif.dir/src/gtk_gif.cpp.o"
+  "CMakeFiles/marshmallow_gif.dir/src/gtk_setting.cpp.o"
+  "CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o"
+  "CMakeFiles/marshmallow_gif.dir/src/init.cpp.o"
   "CMakeFiles/marshmallow_gif.dir/src/main.cpp.o"
-  "CMakeFiles/marshmallow_gif.dir/src/setting.cpp.o"
-  "CMakeFiles/marshmallow_gif.dir/src/start_setup.cpp.o"
   "marshmallow_gif"
   "marshmallow_gif.pdb"
 )

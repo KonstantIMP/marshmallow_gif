@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/app.dir/src/config.cpp.o"
-  "CMakeFiles/app.dir/src/gif.cpp.o"
+  "CMakeFiles/app.dir/src/gtk_gif.cpp.o"
   "libapp.a"
   "libapp.pdb"
 )

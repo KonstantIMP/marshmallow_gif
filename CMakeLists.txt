@@ -16,15 +16,17 @@ find_package(ImageMagick COMPONENTS Magick++ MagickCore)
 include_directories(${ImageMagick_INCLUDE_DIRS})
 
 set(SOURCE_EXE  src/main.cpp
-                src/app.cpp
-                src/start_setup.cpp
-                src/setting.cpp)
+                src/gtk_app.cpp
+                src/gtk_start_setup.cpp
+                src/gtk_setting.cpp
+                src/init.cpp
+                src/config.cpp
+                src/gtk_gif.cpp)
 
-set(SOURCE_LIB  src/config.cpp
-                src/gif.cpp)
+#set(SOURCE_LIB  )
 
-add_library(app STATIC ${SOURCE_LIB})
+#add_library(app STATIC ${SOURCE_LIB})
 
 add_executable(marshmallow_gif ${SOURCE_EXE})
 
-target_link_libraries(marshmallow_gif app ${GTK3_LIBRARIES} ${X11_LIBRARIES} ${ImageMagick_LIBRARIES})
+target_link_libraries(marshmallow_gif ${GTK3_LIBRARIES} ${X11_LIBRARIES} ${ImageMagick_LIBRARIES})
