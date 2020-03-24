@@ -195,14 +195,14 @@ void gif_viewer::smart_resize(){
         if(gif_animation_w > gif_animation_h){
             tmp_w = gif_animation_w;
 
-            gif_animation_w = gif_place_w;
+            gif_animation_w = gif_place_w - 4;
 
             gif_animation_h = (gif_animation_w * gif_animation_h) / tmp_w;
         }
         else{
             tmp_h = gif_animation_h;
 
-            gif_animation_h = gif_place_h;
+            gif_animation_h = gif_place_h - 4;
 
             gif_animation_w = (gif_animation_h * gif_animation_w) / tmp_h;
         }
@@ -212,14 +212,14 @@ void gif_viewer::smart_resize(){
         if(gif_animation_h > gif_place_h){
             tmp_h = gif_animation_h;
 
-            gif_animation_h = gif_place_h;
+            gif_animation_h = gif_place_h - 4;
 
             gif_animation_w = (gif_animation_h * gif_animation_w) / tmp_h;
         }
         if(gif_animation_w > gif_place_w){
             tmp_w = gif_animation_w;
 
-            gif_animation_w = gif_place_w;
+            gif_animation_w = gif_place_w - 4;
 
             gif_animation_h = (gif_animation_w * gif_animation_h) / tmp_w;
         }
