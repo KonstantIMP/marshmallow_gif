@@ -1,6 +1,6 @@
 [PROGRAMM]
-gui=qt
-theme=marshmallow
+gui=gtk
+theme=system
 language=ru
 
 [FILE]

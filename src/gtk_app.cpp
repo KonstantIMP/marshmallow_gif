@@ -297,8 +297,15 @@ void open_gif(){
 //
 
 void set_icons(){
-    if(get_param(THEME) == "system") {
-
+    if(get_param(THEME) == "system") {\
+        gtk_button_set_image(GTK_BUTTON(option_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_settings.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(exit_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_exit.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(play_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_play.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_re_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_reset.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_down_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_minus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(speed_up_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_plus.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(prev_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_prev_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
+        gtk_button_set_image(GTK_BUTTON(next_image_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/s_next_frame.png", NULL), 30, 30, GDK_INTERP_HYPER)));
     }
     else if(get_param(THEME) == "marshmallow") {
         gtk_button_set_image(GTK_BUTTON(option_btn), gtk_image_new_from_pixbuf(gdk_pixbuf_scale_simple(gdk_pixbuf_new_from_file("image/m_settings.png", NULL), 30, 30, GDK_INTERP_HYPER)));
