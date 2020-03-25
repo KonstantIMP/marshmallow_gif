@@ -3709,7 +3709,6 @@ CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o
  /home/konstantin/Projects/marshmallow_gif/include/config.hpp
  /home/konstantin/Projects/marshmallow_gif/include/qt_start_setup.hpp
  /home/konstantin/Projects/marshmallow_gif/src/qt_start_setup.cpp
- /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/QVariant
  /usr/include/qt/QtCore/qalgorithms.h
  /usr/include/qt/QtCore/qarraydata.h
@@ -3821,6 +3820,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o
  /usr/include/qt/QtWidgets/QFrame
  /usr/include/qt/QtWidgets/QHBoxLayout
  /usr/include/qt/QtWidgets/QLabel
+ /usr/include/qt/QtWidgets/QMessageBox
  /usr/include/qt/QtWidgets/QPushButton
  /usr/include/qt/QtWidgets/QSpacerItem
  /usr/include/qt/QtWidgets/QVBoxLayout
@@ -3829,11 +3829,13 @@ CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o
  /usr/include/qt/QtWidgets/qapplication.h
  /usr/include/qt/QtWidgets/qboxlayout.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
+ /usr/include/qt/QtWidgets/qdialog.h
  /usr/include/qt/QtWidgets/qframe.h
  /usr/include/qt/QtWidgets/qgridlayout.h
  /usr/include/qt/QtWidgets/qlabel.h
  /usr/include/qt/QtWidgets/qlayout.h
  /usr/include/qt/QtWidgets/qlayoutitem.h
+ /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qpushbutton.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qtwidgets-config.h

@@ -27,12 +27,8 @@ QPushButton
 -
 QIcon
 -
-QDebug
+QMessageBox
 -
-
-/usr/include/qt/QtCore/QDebug
-qdebug.h
-/usr/include/qt/QtCore/qdebug.h
 
 /usr/include/qt/QtCore/QVariant
 qvariant.h
@@ -1126,6 +1122,10 @@ qboxlayout.h
 qlabel.h
 /usr/include/qt/QtWidgets/qlabel.h
 
+/usr/include/qt/QtWidgets/QMessageBox
+qmessagebox.h
+/usr/include/qt/QtWidgets/qmessagebox.h
+
 /usr/include/qt/QtWidgets/QPushButton
 qpushbutton.h
 /usr/include/qt/QtWidgets/qpushbutton.h
@@ -1186,6 +1186,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+/usr/include/qt/QtWidgets/qdialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
 /usr/include/qt/QtWidgets/qframe.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1236,6 +1242,12 @@ QtWidgets/qsizepolicy.h
 QtCore/qrect.h
 -
 limits.h
+-
+
+/usr/include/qt/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
 -
 
 /usr/include/qt/QtWidgets/qpushbutton.h

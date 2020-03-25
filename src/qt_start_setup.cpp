@@ -7,7 +7,7 @@
 #include <QPushButton>
 #include <QIcon>
 
-#include <QDebug>
+#include <QMessageBox>
 
 QString theme;
 
@@ -21,8 +21,14 @@ qt_start_setup::qt_start_setup(QWidget *parent) :
 
     this->setWindowIcon(QIcon("image/start.png"));
 
-    if(QLocale::system().name() == "ru_RU") set_ru();
-    else set_en();
+    if(QLocale::system().name() == "ru_RU") {
+        set_ru();
+        QMessageBox::warning(this, "Внимание", "По умолчанию используется интерфейс на QT.\nВы можете изхменить это в настройках\n(Не рекомендуется на Win и MacOS)");
+    }
+    else {
+        set_en();
+        QMessageBox::warning(this, "Warning", "The default interface is on QT.\nYou can change this in the settings\n(Not recommended on Win and MacOS)");
+    }
 
     set_sys();
 
