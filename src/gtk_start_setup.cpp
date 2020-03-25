@@ -16,6 +16,8 @@ std::string theme_s;
 
 static GtkWidget * create_window();
 
+void warning_dialog();
+
 void connect_signals();
 
 void connect_css();
@@ -63,6 +65,8 @@ void gtk_start_setup(){
     window = create_window();
 
     gtk_widget_show(window);
+
+    warning_dialog();
 
     gtk_main();
 
@@ -305,4 +309,25 @@ void end_setup(){
     create_cfg("gtk", theme_s, language, STANDART, STANDART, STANDART, STANDART);
 
     gtk_main_quit();
+}
+
+//
+
+void warning_dialog(){
+    GtkWidget * dialog;
+
+    char *lang = {(char*)gtk_button_get_label(GTK_BUTTON(lang_btn))};
+
+    if(lang[0] == 'E' && lang[1] == 'N') {
+        dialog = gtk_message_dialog_new(GTK_WINDOW(window), GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_WARNING, GTK_BUTTONS_OK, "По умолчанию используется\n интерфейс на GTK+.\nВы можете изменить это в настройках");
+    }
+    else {
+        dialog = gtk_message_dialog_new(GTK_WINDOW(window), GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_WARNING, GTK_BUTTONS_OK, "The default interface is GTK+. \nYou can change this in the settings");
+    }
+
+    gtk_widget_show_all(GTK_WIDGET(dialog));
+
+    gtk_dialog_run(GTK_DIALOG(dialog));
+
+    gtk_widget_destroy(dialog);
 }

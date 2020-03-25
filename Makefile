@@ -140,6 +140,46 @@ marshmallow_gif/fast:
 	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/build
 .PHONY : marshmallow_gif/fast
 
+#=============================================================================
+# Target rules for targets named marshmallow_gif_autogen
+
+# Build rule for target.
+marshmallow_gif_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 marshmallow_gif_autogen
+.PHONY : marshmallow_gif_autogen
+
+# fast build rule for target.
+marshmallow_gif_autogen/fast:
+	$(MAKE) -f CMakeFiles/marshmallow_gif_autogen.dir/build.make CMakeFiles/marshmallow_gif_autogen.dir/build
+.PHONY : marshmallow_gif_autogen/fast
+
+marshmallow_gif_autogen/mocs_compilation.o: marshmallow_gif_autogen/mocs_compilation.cpp.o
+
+.PHONY : marshmallow_gif_autogen/mocs_compilation.o
+
+# target to build an object file
+marshmallow_gif_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
+.PHONY : marshmallow_gif_autogen/mocs_compilation.cpp.o
+
+marshmallow_gif_autogen/mocs_compilation.i: marshmallow_gif_autogen/mocs_compilation.cpp.i
+
+.PHONY : marshmallow_gif_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+marshmallow_gif_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.i
+.PHONY : marshmallow_gif_autogen/mocs_compilation.cpp.i
+
+marshmallow_gif_autogen/mocs_compilation.s: marshmallow_gif_autogen/mocs_compilation.cpp.s
+
+.PHONY : marshmallow_gif_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+marshmallow_gif_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.s
+.PHONY : marshmallow_gif_autogen/mocs_compilation.cpp.s
+
 src/config.o: src/config.cpp.o
 
 .PHONY : src/config.o
@@ -329,6 +369,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/qt_start_setup.o: src/qt_start_setup.cpp.o
+
+.PHONY : src/qt_start_setup.o
+
+# target to build an object file
+src/qt_start_setup.cpp.o:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o
+.PHONY : src/qt_start_setup.cpp.o
+
+src/qt_start_setup.i: src/qt_start_setup.cpp.i
+
+.PHONY : src/qt_start_setup.i
+
+# target to preprocess a source file
+src/qt_start_setup.cpp.i:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.i
+.PHONY : src/qt_start_setup.cpp.i
+
+src/qt_start_setup.s: src/qt_start_setup.cpp.s
+
+.PHONY : src/qt_start_setup.s
+
+# target to generate assembly for a file
+src/qt_start_setup.cpp.s:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.s
+.PHONY : src/qt_start_setup.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -337,7 +404,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... marshmallow_gif_autogen"
 	@echo "... marshmallow_gif"
+	@echo "... marshmallow_gif_autogen/mocs_compilation.o"
+	@echo "... marshmallow_gif_autogen/mocs_compilation.i"
+	@echo "... marshmallow_gif_autogen/mocs_compilation.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
@@ -359,6 +430,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/qt_start_setup.o"
+	@echo "... src/qt_start_setup.i"
+	@echo "... src/qt_start_setup.s"
 .PHONY : help
 
 
