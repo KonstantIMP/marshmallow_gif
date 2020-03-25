@@ -18,7 +18,17 @@ public:
 private:
     Ui::qt_start_setup *ui;
 
-    void get_lang();
+    void set_ru();
+    void set_en();
+
+    void closeEvent(QCloseEvent *event);
+
+private slots:
+    void change_lang();
+
+    void set_sys();
+    void set_marsh();
+    void set_or();
 };
 
 #endif // QT_START_SETUP_HPP

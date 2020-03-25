@@ -3705,6 +3705,7 @@ CMakeFiles/marshmallow_gif.dir/src/main.cpp.o: include/init.hpp
 CMakeFiles/marshmallow_gif.dir/src/main.cpp.o: lib/queue.hpp
 CMakeFiles/marshmallow_gif.dir/src/main.cpp.o: src/main.cpp
 
+CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: include/config.hpp
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: include/qt_start_setup.hpp
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: src/qt_start_setup.cpp
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtCore/QDebug
@@ -3784,6 +3785,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtCore/
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtCore/qvarlengtharray.h
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtCore/qvector.h
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtCore/qversiontagging.h
+CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtGui/QCloseEvent
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtGui/QIcon
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtGui/qbrush.h
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtGui/qcolor.h
@@ -3815,6 +3817,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtGui/q
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtGui/qwindowdefs.h
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtGui/qwindowdefs_win.h
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtWidgets/QApplication
+CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtWidgets/QFrame
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtWidgets/QHBoxLayout
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtWidgets/QLabel
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o: /usr/include/qt/QtWidgets/QPushButton

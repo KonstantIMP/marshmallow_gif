@@ -3706,6 +3706,7 @@ CMakeFiles/marshmallow_gif.dir/src/main.cpp.o
  /home/konstantin/Projects/marshmallow_gif/lib/queue.hpp
  /home/konstantin/Projects/marshmallow_gif/src/main.cpp
 CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o
+ /home/konstantin/Projects/marshmallow_gif/include/config.hpp
  /home/konstantin/Projects/marshmallow_gif/include/qt_start_setup.hpp
  /home/konstantin/Projects/marshmallow_gif/src/qt_start_setup.cpp
  /usr/include/qt/QtCore/QDebug
@@ -3785,6 +3786,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o
  /usr/include/qt/QtCore/qvarlengtharray.h
  /usr/include/qt/QtCore/qvector.h
  /usr/include/qt/QtCore/qversiontagging.h
+ /usr/include/qt/QtGui/QCloseEvent
  /usr/include/qt/QtGui/QIcon
  /usr/include/qt/QtGui/qbrush.h
  /usr/include/qt/QtGui/qcolor.h
@@ -3816,6 +3818,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o
  /usr/include/qt/QtGui/qwindowdefs.h
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtWidgets/QFrame
  /usr/include/qt/QtWidgets/QHBoxLayout
  /usr/include/qt/QtWidgets/QLabel
  /usr/include/qt/QtWidgets/QPushButton

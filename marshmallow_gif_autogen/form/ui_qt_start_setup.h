@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
@@ -23,16 +24,19 @@ QT_BEGIN_NAMESPACE
 class Ui_qt_start_setup
 {
 public:
+    QVBoxLayout *verticalLayout_6;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer;
     QLabel *hello_msg;
     QSpacerItem *horizontalSpacer_2;
     QLabel *thank_msg;
+    QFrame *line;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *lang_btn;
     QSpacerItem *horizontalSpacer_4;
+    QFrame *line_2;
     QVBoxLayout *verticalLayout_4;
     QLabel *theme_msg;
     QHBoxLayout *horizontalLayout;
@@ -54,7 +58,9 @@ public:
         if (qt_start_setup->objectName().isEmpty())
             qt_start_setup->setObjectName(QString::fromUtf8("qt_start_setup"));
         qt_start_setup->resize(412, 347);
-        verticalLayout_5 = new QVBoxLayout(qt_start_setup);
+        verticalLayout_6 = new QVBoxLayout(qt_start_setup);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
@@ -77,9 +83,20 @@ public:
 
         thank_msg = new QLabel(qt_start_setup);
         thank_msg->setObjectName(QString::fromUtf8("thank_msg"));
+        thank_msg->setMaximumSize(QSize(16777215, 50));
         thank_msg->setAlignment(Qt::AlignCenter);
 
         verticalLayout_5->addWidget(thank_msg);
+
+
+        verticalLayout_6->addLayout(verticalLayout_5);
+
+        line = new QFrame(qt_start_setup);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_6->addWidget(line);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
@@ -89,6 +106,7 @@ public:
 
         lang_btn = new QPushButton(qt_start_setup);
         lang_btn->setObjectName(QString::fromUtf8("lang_btn"));
+        lang_btn->setMinimumSize(QSize(80, 0));
 
         horizontalLayout_3->addWidget(lang_btn);
 
@@ -97,7 +115,14 @@ public:
         horizontalLayout_3->addItem(horizontalSpacer_4);
 
 
-        verticalLayout_5->addLayout(horizontalLayout_3);
+        verticalLayout_6->addLayout(horizontalLayout_3);
+
+        line_2 = new QFrame(qt_start_setup);
+        line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_6->addWidget(line_2);
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
@@ -119,6 +144,7 @@ public:
 
         system_btn = new QPushButton(qt_start_setup);
         system_btn->setObjectName(QString::fromUtf8("system_btn"));
+        system_btn->setMinimumSize(QSize(0, 30));
 
         verticalLayout->addWidget(system_btn);
 
@@ -135,6 +161,30 @@ public:
 
         marsh_btn = new QPushButton(qt_start_setup);
         marsh_btn->setObjectName(QString::fromUtf8("marsh_btn"));
+        marsh_btn->setMinimumSize(QSize(0, 30));
+        marsh_btn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	font-family: \"Comic Sans MS\", \"Arial\", \"Hack\";\n"
+"    font-size: 14px;\n"
+"\n"
+"    background-color: #2d313d;\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #e8324f;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #ffffff;\n"
+"\n"
+"    color: #2d313d;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: #ffffff;\n"
+"\n"
+"    color: #e8324f;\n"
+"\n"
+"    border-color: #ffffff;\n"
+"}"));
 
         verticalLayout_2->addWidget(marsh_btn);
 
@@ -151,6 +201,30 @@ public:
 
         or_btn = new QPushButton(qt_start_setup);
         or_btn->setObjectName(QString::fromUtf8("or_btn"));
+        or_btn->setMinimumSize(QSize(0, 30));
+        or_btn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	font-family: \"DejaVu Sans\", \"Georgia\";\n"
+"    font-size: 14px;\n"
+"\n"
+"    background-color: #363636;\n"
+"\n"
+"    color: #ffffff;\n"
+"\n"
+"    border-radius: 0px;\n"
+"    border: 2px solid #ff4d00;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #ff4d00;\n"
+"\n"
+"    border-color: #363636;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: #ffffff;\n"
+"\n"
+"    color: #ff4d00;\n"
+"\n"
+"    border-color: #363636;\n"
+"}"));
 
         verticalLayout_3->addWidget(or_btn);
 
@@ -161,7 +235,7 @@ public:
         verticalLayout_4->addLayout(horizontalLayout);
 
 
-        verticalLayout_5->addLayout(verticalLayout_4);
+        verticalLayout_6->addLayout(verticalLayout_4);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
@@ -171,11 +245,12 @@ public:
 
         ok_btn = new QPushButton(qt_start_setup);
         ok_btn->setObjectName(QString::fromUtf8("ok_btn"));
+        ok_btn->setMinimumSize(QSize(80, 30));
 
         horizontalLayout_4->addWidget(ok_btn);
 
 
-        verticalLayout_5->addLayout(horizontalLayout_4);
+        verticalLayout_6->addLayout(horizontalLayout_4);
 
 
         retranslateUi(qt_start_setup);

@@ -13,24 +13,57 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_5">
+  <layout class="QVBoxLayout" name="verticalLayout_6">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="hello_msg">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QLabel" name="hello_msg">
+      <widget class="QLabel" name="thank_msg">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>50</height>
+        </size>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -39,28 +72,12 @@
        </property>
       </widget>
      </item>
-     <item>
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
     </layout>
    </item>
    <item>
-    <widget class="QLabel" name="thank_msg">
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
@@ -81,6 +98,12 @@
      </item>
      <item>
       <widget class="QPushButton" name="lang_btn">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -100,6 +123,13 @@
       </spacer>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
    </item>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -129,6 +159,12 @@
          </item>
          <item>
           <widget class="QPushButton" name="system_btn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -150,6 +186,37 @@
          </item>
          <item>
           <widget class="QPushButton" name="marsh_btn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	font-family: &quot;Comic Sans MS&quot;, &quot;Arial&quot;, &quot;Hack&quot;;
+    font-size: 14px;
+
+    background-color: #2d313d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+    border: 2px solid #e8324f;
+}
+QPushButton:hover{
+	background-color: #ffffff;
+
+    color: #2d313d;
+}
+QPushButton:pressed{
+	background-color: #ffffff;
+
+    color: #e8324f;
+
+    border-color: #ffffff;
+}</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -171,6 +238,37 @@
          </item>
          <item>
           <widget class="QPushButton" name="or_btn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	font-family: &quot;DejaVu Sans&quot;, &quot;Georgia&quot;;
+    font-size: 14px;
+
+    background-color: #363636;
+
+    color: #ffffff;
+
+    border-radius: 0px;
+    border: 2px solid #ff4d00;
+}
+QPushButton:hover{
+	background-color: #ff4d00;
+
+    border-color: #363636;
+}
+QPushButton:pressed{
+	background-color: #ffffff;
+
+    color: #ff4d00;
+
+    border-color: #363636;
+}</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -199,6 +297,12 @@
      </item>
      <item>
       <widget class="QPushButton" name="ok_btn">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>OK</string>
        </property>

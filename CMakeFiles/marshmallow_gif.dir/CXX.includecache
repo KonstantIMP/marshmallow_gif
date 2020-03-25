@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/konstantin/Projects/marshmallow_gif/include/config.hpp
+string
+-
+
 /home/konstantin/Projects/marshmallow_gif/include/qt_start_setup.hpp
 QWidget
 -
@@ -15,6 +19,12 @@ QWidget
 /home/konstantin/Projects/marshmallow_gif/include/qt_start_setup.hpp
 ../form/ui_qt_start_setup.h
 /home/konstantin/Projects/marshmallow_gif/form/ui_qt_start_setup.h
+../include/config.hpp
+/home/konstantin/Projects/marshmallow_gif/include/config.hpp
+QCloseEvent
+-
+QPushButton
+-
 QIcon
 -
 QDebug
@@ -766,6 +776,10 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
+/usr/include/qt/QtGui/QCloseEvent
+qevent.h
+/usr/include/qt/QtGui/qevent.h
+
 /usr/include/qt/QtGui/QIcon
 qicon.h
 /usr/include/qt/QtGui/qicon.h
@@ -1100,6 +1114,10 @@ QtGui/qtguiglobal.h
 qapplication.h
 /usr/include/qt/QtWidgets/qapplication.h
 
+/usr/include/qt/QtWidgets/QFrame
+qframe.h
+/usr/include/qt/QtWidgets/qframe.h
+
 /usr/include/qt/QtWidgets/QHBoxLayout
 qboxlayout.h
 /usr/include/qt/QtWidgets/qboxlayout.h
@@ -1278,6 +1296,8 @@ marshmallow_gif_autogen/form/ui_qt_start_setup.h
 QtCore/QVariant
 -
 QtWidgets/QApplication
+-
+QtWidgets/QFrame
 -
 QtWidgets/QHBoxLayout
 -
