@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/konstantin/Projects/marshmallow_gif/src/gtk_start_setup.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o"
   "/home/konstantin/Projects/marshmallow_gif/src/init.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/init.cpp.o"
   "/home/konstantin/Projects/marshmallow_gif/src/main.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/main.cpp.o"
+  "/home/konstantin/Projects/marshmallow_gif/src/qt_mainwindow.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o"
   "/home/konstantin/Projects/marshmallow_gif/src/qt_start_setup.cpp" "/home/konstantin/Projects/marshmallow_gif/CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/marshmallow_gif.dir/src/gtk_start_setup.cpp.o"
   "CMakeFiles/marshmallow_gif.dir/src/init.cpp.o"
   "CMakeFiles/marshmallow_gif.dir/src/main.cpp.o"
+  "CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o"
   "CMakeFiles/marshmallow_gif.dir/src/qt_start_setup.cpp.o"
   "marshmallow_gif"
   "marshmallow_gif.pdb"

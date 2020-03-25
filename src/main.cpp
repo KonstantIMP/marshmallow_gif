@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){
 
     for(int i{1}; i < argc; i++) files.enqueue(argv[i]);
 
-    start_app(files);
+    start_app(files, &argc, &argv);
 
     return 0;
 }

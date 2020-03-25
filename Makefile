@@ -369,6 +369,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/qt_mainwindow.o: src/qt_mainwindow.cpp.o
+
+.PHONY : src/qt_mainwindow.o
+
+# target to build an object file
+src/qt_mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
+.PHONY : src/qt_mainwindow.cpp.o
+
+src/qt_mainwindow.i: src/qt_mainwindow.cpp.i
+
+.PHONY : src/qt_mainwindow.i
+
+# target to preprocess a source file
+src/qt_mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.i
+.PHONY : src/qt_mainwindow.cpp.i
+
+src/qt_mainwindow.s: src/qt_mainwindow.cpp.s
+
+.PHONY : src/qt_mainwindow.s
+
+# target to generate assembly for a file
+src/qt_mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/marshmallow_gif.dir/build.make CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.s
+.PHONY : src/qt_mainwindow.cpp.s
+
 src/qt_start_setup.o: src/qt_start_setup.cpp.o
 
 .PHONY : src/qt_start_setup.o
@@ -430,6 +457,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/qt_mainwindow.o"
+	@echo "... src/qt_mainwindow.i"
+	@echo "... src/qt_mainwindow.s"
 	@echo "... src/qt_start_setup.o"
 	@echo "... src/qt_start_setup.i"
 	@echo "... src/qt_start_setup.s"

@@ -5,6 +5,7 @@
 #include "../include/gtk_app.hpp"
 
 #include "../include/qt_start_setup.hpp"
+#include "../include/qt_mainwindow.hpp"
 #include <QApplication>
 
 #if defined(linux) || defined(__linux)
@@ -17,7 +18,7 @@
 
 int app_init(int * argc, char *** argv){
     if(!(search_cfg())){
-        if(OS == "windows" || OS != "mac_os"){
+        if(OS == "windows" || OS == "mac_os"){
             QApplication start_setup(*argc, *argv);
 
             qt_start_setup start_win;
@@ -38,9 +39,16 @@ int app_init(int * argc, char *** argv){
     return 0;
 }
 
-int start_app(queue<std::string> gif_queue){
+int start_app(queue<std::string> gif_queue, int * argc, char *** argv){
     if(get_param(GUI) == "gtk") gtk_start_app(gif_queue);
-    //else
+    else{
+        QApplication main_win(*argc, *argv);
+
+        MainWindow win;
+        win.show();
+
+       while(main_win.exec());
+    }
 
     return 0;
 }

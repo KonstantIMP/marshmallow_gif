@@ -34,7 +34,9 @@ set(SOURCE_EXE  src/main.cpp
                 src/config.cpp
                 src/gtk_gif.cpp
                 src/qt_start_setup.cpp
+                src/qt_mainwindow.cpp
                 include/qt_start_setup.hpp
+                include/qt_mainwindow.hpp
                 include/config.hpp
                 include/gtk_app.hpp
                 include/gtk_gif.hpp
@@ -44,7 +46,8 @@ set(SOURCE_EXE  src/main.cpp
                 lib/queue.hpp
                 lib/stack.hpp
                 lib/list.hpp
-                form/qt_start_setup.ui)
+                form/qt_start_setup.ui
+                form/qt_mainwindow.ui)
 
 #set(SOURCE_LIB  )
 

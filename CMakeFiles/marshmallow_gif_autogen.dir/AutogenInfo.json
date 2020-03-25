@@ -40,6 +40,11 @@
 			"6YEA5652QU/moc_init.cpp"
 		],
 		[
+			"/home/konstantin/Projects/marshmallow_gif/include/qt_mainwindow.hpp",
+			"MU",
+			"6YEA5652QU/moc_qt_mainwindow.cpp"
+		],
+		[
 			"/home/konstantin/Projects/marshmallow_gif/include/qt_start_setup.hpp",
 			"MU",
 			"6YEA5652QU/moc_qt_start_setup.cpp"
@@ -142,6 +147,10 @@
 		],
 		[ "/home/konstantin/Projects/marshmallow_gif/src/init.cpp", "MU" ],
 		[ "/home/konstantin/Projects/marshmallow_gif/src/main.cpp", "MU" ],
+		[
+			"/home/konstantin/Projects/marshmallow_gif/src/qt_mainwindow.cpp",
+			"MU"
+		],
 		[
 			"/home/konstantin/Projects/marshmallow_gif/src/qt_start_setup.cpp",
 			"MU"

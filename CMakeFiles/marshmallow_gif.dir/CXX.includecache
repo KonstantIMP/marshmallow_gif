@@ -10,24 +10,18 @@
 string
 -
 
-/home/konstantin/Projects/marshmallow_gif/include/qt_start_setup.hpp
-QWidget
+/home/konstantin/Projects/marshmallow_gif/include/qt_mainwindow.hpp
+QMainWindow
 -
 
-/home/konstantin/Projects/marshmallow_gif/src/qt_start_setup.cpp
-../include/qt_start_setup.hpp
-/home/konstantin/Projects/marshmallow_gif/include/qt_start_setup.hpp
-../form/ui_qt_start_setup.h
-/home/konstantin/Projects/marshmallow_gif/form/ui_qt_start_setup.h
+/home/konstantin/Projects/marshmallow_gif/src/qt_mainwindow.cpp
+../include/qt_mainwindow.hpp
+/home/konstantin/Projects/marshmallow_gif/include/qt_mainwindow.hpp
+../form/ui_qt_mainwindow.h
+/home/konstantin/Projects/marshmallow_gif/form/ui_qt_mainwindow.h
 ../include/config.hpp
 /home/konstantin/Projects/marshmallow_gif/include/config.hpp
-QCloseEvent
--
-QPushButton
--
 QIcon
--
-QMessageBox
 -
 
 /usr/include/qt/QtCore/QVariant
@@ -772,10 +766,6 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
-/usr/include/qt/QtGui/QCloseEvent
-qevent.h
-/usr/include/qt/QtGui/qevent.h
-
 /usr/include/qt/QtGui/QIcon
 qicon.h
 /usr/include/qt/QtGui/qicon.h
@@ -1110,10 +1100,6 @@ QtGui/qtguiglobal.h
 qapplication.h
 /usr/include/qt/QtWidgets/qapplication.h
 
-/usr/include/qt/QtWidgets/QFrame
-qframe.h
-/usr/include/qt/QtWidgets/qframe.h
-
 /usr/include/qt/QtWidgets/QHBoxLayout
 qboxlayout.h
 /usr/include/qt/QtWidgets/qboxlayout.h
@@ -1122,17 +1108,13 @@ qboxlayout.h
 qlabel.h
 /usr/include/qt/QtWidgets/qlabel.h
 
-/usr/include/qt/QtWidgets/QMessageBox
-qmessagebox.h
-/usr/include/qt/QtWidgets/qmessagebox.h
+/usr/include/qt/QtWidgets/QMainWindow
+qmainwindow.h
+/usr/include/qt/QtWidgets/qmainwindow.h
 
 /usr/include/qt/QtWidgets/QPushButton
 qpushbutton.h
 /usr/include/qt/QtWidgets/qpushbutton.h
-
-/usr/include/qt/QtWidgets/QSpacerItem
-qlayoutitem.h
-/usr/include/qt/QtWidgets/qlayoutitem.h
 
 /usr/include/qt/QtWidgets/QVBoxLayout
 qboxlayout.h
@@ -1181,12 +1163,6 @@ limits.h
 -
 
 /usr/include/qt/QtWidgets/qdesktopwidget.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-
-/usr/include/qt/QtWidgets/qdialog.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
@@ -1244,10 +1220,12 @@ QtCore/qrect.h
 limits.h
 -
 
-/usr/include/qt/QtWidgets/qmessagebox.h
+/usr/include/qt/QtWidgets/qmainwindow.h
 QtWidgets/qtwidgetsglobal.h
 -
-QtWidgets/qdialog.h
+QtWidgets/qwidget.h
+-
+QtWidgets/qtabwidget.h
 -
 
 /usr/include/qt/QtWidgets/qpushbutton.h
@@ -1262,6 +1240,14 @@ QtWidgets/qtwidgetsglobal.h
 QtCore/qobject.h
 -
 QtCore/qalgorithms.h
+-
+
+/usr/include/qt/QtWidgets/qtabwidget.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+QtGui/qicon.h
 -
 
 /usr/include/qt/QtWidgets/qtwidgets-config.h
@@ -1304,20 +1290,18 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
-marshmallow_gif_autogen/form/ui_qt_start_setup.h
+marshmallow_gif_autogen/form/ui_qt_mainwindow.h
 QtCore/QVariant
 -
 QtWidgets/QApplication
--
-QtWidgets/QFrame
 -
 QtWidgets/QHBoxLayout
 -
 QtWidgets/QLabel
 -
-QtWidgets/QPushButton
+QtWidgets/QMainWindow
 -
-QtWidgets/QSpacerItem
+QtWidgets/QPushButton
 -
 QtWidgets/QVBoxLayout
 -
