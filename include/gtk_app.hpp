@@ -7,6 +7,6 @@
 
 int gtk_app_init(int *, char ***);
 
-int gtk_start_app(queue<std::string>);
+int gtk_start_app(std::string);
 
 #endif

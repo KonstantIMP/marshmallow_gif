@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>312</width>
-    <height>422</height>
+    <height>437</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,12 +26,21 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="exit_btn">
+        <property name="minimumSize">
+         <size>
+          <width>35</width>
+          <height>35</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>35</width>
@@ -48,6 +57,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="option_btn">
+        <property name="minimumSize">
+         <size>
+          <width>35</width>
+          <height>35</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>35</width>
@@ -61,6 +76,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="open_btn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -74,6 +95,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="pp_btn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>35</width>

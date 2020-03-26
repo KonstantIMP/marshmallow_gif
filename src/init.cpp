@@ -39,7 +39,7 @@ int app_init(int * argc, char *** argv){
     return 0;
 }
 
-int start_app(queue<std::string> gif_queue, int * argc, char *** argv){
+int start_app(std::string gif_queue, int * argc, char *** argv){
     if(get_param(GUI) == "gtk") gtk_start_app(gif_queue);
     else{
         QApplication main_win(*argc, *argv);
@@ -47,7 +47,14 @@ int start_app(queue<std::string> gif_queue, int * argc, char *** argv){
         MainWindow win;
         win.show();
 
-       while(main_win.exec());
+        if(gif_queue != ""){
+            if(get_param(LOTS) == "last") win.load_from_file(gif_queue);
+            else{
+                //will be latest
+            }
+        }
+
+        while(main_win.exec());
     }
 
     return 0;

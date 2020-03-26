@@ -83,23 +83,21 @@ int gtk_app_init(int *argc, char ***argv){
 
 // -------------------- Запуск приложения --------------------
 
-int gtk_start_app(queue<std::string> gif_queue){
+int gtk_start_app(std::string gif_queue){
     main_window = create_main_window();
 
-    if(gif_queue.get_size() != 0){
-        if(gif_queue.get_size() == 1) gif_animation.open_file(gif_queue.dequeue());
-        else{
-            if(get_param(LOTS) == "last") gif_animation.open_file(gif_queue.dequeue());
-            else{
-                //Реализую позже
-            }
-        }
-    }
+    gtk_widget_show(main_window);
 
     gif_animation.set_place(gif_place);
     gif_animation.smart_resize();
 
-    gtk_widget_show(main_window);
+    if(gif_queue != ""){
+        gif_animation.unref_gif();
+        gif_animation.open_file(gif_queue);
+    }
+
+    gif_animation.set_place(gif_place);
+    gif_animation.smart_resize();
 
     gtk_main();
 

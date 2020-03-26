@@ -20,9 +20,12 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qcontainerfwd.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qcontainertools_impl.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qcontiguouscache.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qcoreapplication.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qcoreevent.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qdatastream.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qdebug.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qeventloop.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qfactoryinterface.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qfile.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qfiledevice.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qflags.h
@@ -33,6 +36,8 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qhashfunctions.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qiodevice.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qiterator.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qjsonobject.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qjsonvalue.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qline.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qlist.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qlocale.h
@@ -48,7 +53,9 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qobjectdefs.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qobjectdefs_impl.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qpair.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qplugin.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qpoint.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qpointer.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qprocessordetection.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qrect.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qrefcount.h
@@ -77,6 +84,7 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qvarlengtharray.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qvector.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qversiontagging.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/QMovie
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qbrush.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qcolor.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qcursor.h
@@ -86,8 +94,11 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qfontmetrics.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qicon.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qimage.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qimageiohandler.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qimagereader.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qkeysequence.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qmatrix.h
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qmovie.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qpaintdevice.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qpainterpath.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qpalette.h
@@ -114,6 +125,7 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qwidget.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: include/qt_mainwindow.hpp
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: include/qt_start_setup.hpp
+CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: lib/queue.hpp
 
 CMakeFiles/marshmallow_gif.dir/src/config.cpp.o: include/config.hpp
 CMakeFiles/marshmallow_gif.dir/src/config.cpp.o: src/config.cpp
@@ -3617,6 +3629,7 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qcoreevent
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qdatastream.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qdebug.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qeventloop.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qfactoryinterface.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qfile.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qfiledevice.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qflags.h
@@ -3627,6 +3640,8 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qhash.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qhashfunctions.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qiodevice.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qiterator.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qjsonobject.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qjsonvalue.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qline.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qlist.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qlocale.h
@@ -3642,7 +3657,9 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qobject_im
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qobjectdefs.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qobjectdefs_impl.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qpair.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qplugin.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qpoint.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qpointer.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qprocessordetection.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qrect.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qrefcount.h
@@ -3671,6 +3688,7 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qvariant.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qvarlengtharray.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qvector.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtCore/qversiontagging.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/QMovie
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qbrush.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qcolor.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qcursor.h
@@ -3681,9 +3699,12 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qfontmetric
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qguiapplication.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qicon.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qimage.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qimageiohandler.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qimagereader.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qinputmethod.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qkeysequence.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qmatrix.h
+CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qmovie.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qpaintdevice.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qpainterpath.h
 CMakeFiles/marshmallow_gif.dir/src/init.cpp.o: /usr/include/qt/QtGui/qpalette.h
@@ -3718,7 +3739,9 @@ CMakeFiles/marshmallow_gif.dir/src/main.cpp.o: src/main.cpp
 
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: include/config.hpp
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: include/qt_mainwindow.hpp
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: lib/queue.hpp
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: src/qt_mainwindow.cpp
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/QDebug
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/QVariant
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qalgorithms.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qarraydata.h
@@ -3740,9 +3763,12 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/q
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qcoreevent.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qdatastream.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qdebug.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qdir.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qeventloop.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qfactoryinterface.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qfile.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qfiledevice.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qfileinfo.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qflags.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qgenericatomic.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qglobal.h
@@ -3751,6 +3777,8 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/q
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qhashfunctions.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qiodevice.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qiterator.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qjsonobject.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qjsonvalue.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qline.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qlist.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qlocale.h
@@ -3766,7 +3794,9 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/q
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qobjectdefs.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qobjectdefs_impl.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qpair.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qplugin.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qpoint.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qpointer.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qprocessordetection.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qrect.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qrefcount.h
@@ -3796,6 +3826,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/q
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qvector.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/qversiontagging.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/QIcon
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/QMovie
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qbrush.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qcolor.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qcursor.h
@@ -3806,9 +3837,12 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qf
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qguiapplication.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qicon.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qimage.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qimageiohandler.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qimagereader.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qinputmethod.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qkeysequence.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qmatrix.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qmovie.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qpaintdevice.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qpainterpath.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qpalette.h
@@ -3826,6 +3860,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qv
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qwindowdefs.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtGui/qwindowdefs_win.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/QApplication
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/QFileDialog
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/QHBoxLayout
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/QLabel
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/QMainWindow
@@ -3836,6 +3871,8 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidget
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qapplication.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qboxlayout.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qdesktopwidget.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qdialog.h
+CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qfiledialog.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qframe.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qgridlayout.h
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtWidgets/qlabel.h

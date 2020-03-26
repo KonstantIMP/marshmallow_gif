@@ -7,6 +7,6 @@
 
 int app_init(int *, char ***);
 
-int start_app(queue<std::string>, int *, char ***);
+int start_app(std::string, int *, char ***);
 
 #endif

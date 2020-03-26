@@ -21,9 +21,12 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtCore/qcontainerfwd.h
  /usr/include/qt/QtCore/qcontainertools_impl.h
  /usr/include/qt/QtCore/qcontiguouscache.h
+ /usr/include/qt/QtCore/qcoreapplication.h
  /usr/include/qt/QtCore/qcoreevent.h
  /usr/include/qt/QtCore/qdatastream.h
  /usr/include/qt/QtCore/qdebug.h
+ /usr/include/qt/QtCore/qeventloop.h
+ /usr/include/qt/QtCore/qfactoryinterface.h
  /usr/include/qt/QtCore/qfile.h
  /usr/include/qt/QtCore/qfiledevice.h
  /usr/include/qt/QtCore/qflags.h
@@ -34,6 +37,8 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtCore/qhashfunctions.h
  /usr/include/qt/QtCore/qiodevice.h
  /usr/include/qt/QtCore/qiterator.h
+ /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/qt/QtCore/qjsonvalue.h
  /usr/include/qt/QtCore/qline.h
  /usr/include/qt/QtCore/qlist.h
  /usr/include/qt/QtCore/qlocale.h
@@ -49,7 +54,9 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtCore/qobjectdefs.h
  /usr/include/qt/QtCore/qobjectdefs_impl.h
  /usr/include/qt/QtCore/qpair.h
+ /usr/include/qt/QtCore/qplugin.h
  /usr/include/qt/QtCore/qpoint.h
+ /usr/include/qt/QtCore/qpointer.h
  /usr/include/qt/QtCore/qprocessordetection.h
  /usr/include/qt/QtCore/qrect.h
  /usr/include/qt/QtCore/qrefcount.h
@@ -78,6 +85,7 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtCore/qvarlengtharray.h
  /usr/include/qt/QtCore/qvector.h
  /usr/include/qt/QtCore/qversiontagging.h
+ /usr/include/qt/QtGui/QMovie
  /usr/include/qt/QtGui/qbrush.h
  /usr/include/qt/QtGui/qcolor.h
  /usr/include/qt/QtGui/qcursor.h
@@ -87,8 +95,11 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtGui/qfontmetrics.h
  /usr/include/qt/QtGui/qicon.h
  /usr/include/qt/QtGui/qimage.h
+ /usr/include/qt/QtGui/qimageiohandler.h
+ /usr/include/qt/QtGui/qimagereader.h
  /usr/include/qt/QtGui/qkeysequence.h
  /usr/include/qt/QtGui/qmatrix.h
+ /usr/include/qt/QtGui/qmovie.h
  /usr/include/qt/QtGui/qpaintdevice.h
  /usr/include/qt/QtGui/qpainterpath.h
  /usr/include/qt/QtGui/qpalette.h
@@ -115,6 +126,7 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtWidgets/qwidget.h
  include/qt_mainwindow.hpp
  include/qt_start_setup.hpp
+ lib/queue.hpp
 CMakeFiles/marshmallow_gif.dir/src/config.cpp.o
  /home/konstantin/Projects/marshmallow_gif/include/config.hpp
  /home/konstantin/Projects/marshmallow_gif/src/config.cpp
@@ -3618,6 +3630,7 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o
  /usr/include/qt/QtCore/qdatastream.h
  /usr/include/qt/QtCore/qdebug.h
  /usr/include/qt/QtCore/qeventloop.h
+ /usr/include/qt/QtCore/qfactoryinterface.h
  /usr/include/qt/QtCore/qfile.h
  /usr/include/qt/QtCore/qfiledevice.h
  /usr/include/qt/QtCore/qflags.h
@@ -3628,6 +3641,8 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o
  /usr/include/qt/QtCore/qhashfunctions.h
  /usr/include/qt/QtCore/qiodevice.h
  /usr/include/qt/QtCore/qiterator.h
+ /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/qt/QtCore/qjsonvalue.h
  /usr/include/qt/QtCore/qline.h
  /usr/include/qt/QtCore/qlist.h
  /usr/include/qt/QtCore/qlocale.h
@@ -3643,7 +3658,9 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o
  /usr/include/qt/QtCore/qobjectdefs.h
  /usr/include/qt/QtCore/qobjectdefs_impl.h
  /usr/include/qt/QtCore/qpair.h
+ /usr/include/qt/QtCore/qplugin.h
  /usr/include/qt/QtCore/qpoint.h
+ /usr/include/qt/QtCore/qpointer.h
  /usr/include/qt/QtCore/qprocessordetection.h
  /usr/include/qt/QtCore/qrect.h
  /usr/include/qt/QtCore/qrefcount.h
@@ -3672,6 +3689,7 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o
  /usr/include/qt/QtCore/qvarlengtharray.h
  /usr/include/qt/QtCore/qvector.h
  /usr/include/qt/QtCore/qversiontagging.h
+ /usr/include/qt/QtGui/QMovie
  /usr/include/qt/QtGui/qbrush.h
  /usr/include/qt/QtGui/qcolor.h
  /usr/include/qt/QtGui/qcursor.h
@@ -3682,9 +3700,12 @@ CMakeFiles/marshmallow_gif.dir/src/init.cpp.o
  /usr/include/qt/QtGui/qguiapplication.h
  /usr/include/qt/QtGui/qicon.h
  /usr/include/qt/QtGui/qimage.h
+ /usr/include/qt/QtGui/qimageiohandler.h
+ /usr/include/qt/QtGui/qimagereader.h
  /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtGui/qkeysequence.h
  /usr/include/qt/QtGui/qmatrix.h
+ /usr/include/qt/QtGui/qmovie.h
  /usr/include/qt/QtGui/qpaintdevice.h
  /usr/include/qt/QtGui/qpainterpath.h
  /usr/include/qt/QtGui/qpalette.h
@@ -3719,7 +3740,9 @@ CMakeFiles/marshmallow_gif.dir/src/main.cpp.o
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /home/konstantin/Projects/marshmallow_gif/include/config.hpp
  /home/konstantin/Projects/marshmallow_gif/include/qt_mainwindow.hpp
+ /home/konstantin/Projects/marshmallow_gif/lib/queue.hpp
  /home/konstantin/Projects/marshmallow_gif/src/qt_mainwindow.cpp
+ /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/QVariant
  /usr/include/qt/QtCore/qalgorithms.h
  /usr/include/qt/QtCore/qarraydata.h
@@ -3741,9 +3764,12 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /usr/include/qt/QtCore/qcoreevent.h
  /usr/include/qt/QtCore/qdatastream.h
  /usr/include/qt/QtCore/qdebug.h
+ /usr/include/qt/QtCore/qdir.h
  /usr/include/qt/QtCore/qeventloop.h
+ /usr/include/qt/QtCore/qfactoryinterface.h
  /usr/include/qt/QtCore/qfile.h
  /usr/include/qt/QtCore/qfiledevice.h
+ /usr/include/qt/QtCore/qfileinfo.h
  /usr/include/qt/QtCore/qflags.h
  /usr/include/qt/QtCore/qgenericatomic.h
  /usr/include/qt/QtCore/qglobal.h
@@ -3752,6 +3778,8 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /usr/include/qt/QtCore/qhashfunctions.h
  /usr/include/qt/QtCore/qiodevice.h
  /usr/include/qt/QtCore/qiterator.h
+ /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/qt/QtCore/qjsonvalue.h
  /usr/include/qt/QtCore/qline.h
  /usr/include/qt/QtCore/qlist.h
  /usr/include/qt/QtCore/qlocale.h
@@ -3767,7 +3795,9 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /usr/include/qt/QtCore/qobjectdefs.h
  /usr/include/qt/QtCore/qobjectdefs_impl.h
  /usr/include/qt/QtCore/qpair.h
+ /usr/include/qt/QtCore/qplugin.h
  /usr/include/qt/QtCore/qpoint.h
+ /usr/include/qt/QtCore/qpointer.h
  /usr/include/qt/QtCore/qprocessordetection.h
  /usr/include/qt/QtCore/qrect.h
  /usr/include/qt/QtCore/qrefcount.h
@@ -3797,6 +3827,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /usr/include/qt/QtCore/qvector.h
  /usr/include/qt/QtCore/qversiontagging.h
  /usr/include/qt/QtGui/QIcon
+ /usr/include/qt/QtGui/QMovie
  /usr/include/qt/QtGui/qbrush.h
  /usr/include/qt/QtGui/qcolor.h
  /usr/include/qt/QtGui/qcursor.h
@@ -3807,9 +3838,12 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /usr/include/qt/QtGui/qguiapplication.h
  /usr/include/qt/QtGui/qicon.h
  /usr/include/qt/QtGui/qimage.h
+ /usr/include/qt/QtGui/qimageiohandler.h
+ /usr/include/qt/QtGui/qimagereader.h
  /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtGui/qkeysequence.h
  /usr/include/qt/QtGui/qmatrix.h
+ /usr/include/qt/QtGui/qmovie.h
  /usr/include/qt/QtGui/qpaintdevice.h
  /usr/include/qt/QtGui/qpainterpath.h
  /usr/include/qt/QtGui/qpalette.h
@@ -3827,6 +3861,7 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /usr/include/qt/QtGui/qwindowdefs.h
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtWidgets/QFileDialog
  /usr/include/qt/QtWidgets/QHBoxLayout
  /usr/include/qt/QtWidgets/QLabel
  /usr/include/qt/QtWidgets/QMainWindow
@@ -3837,6 +3872,8 @@ CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /usr/include/qt/QtWidgets/qapplication.h
  /usr/include/qt/QtWidgets/qboxlayout.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
+ /usr/include/qt/QtWidgets/qdialog.h
+ /usr/include/qt/QtWidgets/qfiledialog.h
  /usr/include/qt/QtWidgets/qframe.h
  /usr/include/qt/QtWidgets/qgridlayout.h
  /usr/include/qt/QtWidgets/qlabel.h

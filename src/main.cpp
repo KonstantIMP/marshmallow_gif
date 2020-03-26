@@ -10,9 +10,10 @@ int main(int argc, char *argv[]){
         //It will be message
     }
 
-    queue<std::string> files;
+    std::string files;
 
-    for(int i{1}; i < argc; i++) files.enqueue(argv[i]);
+    if(argc < 2) files = "";
+    else files = argv[argc - 1];
 
     start_app(files, &argc, &argv);
 
