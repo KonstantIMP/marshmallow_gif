@@ -126,7 +126,6 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtWidgets/qwidget.h
  include/qt_mainwindow.hpp
  include/qt_start_setup.hpp
- lib/queue.hpp
 CMakeFiles/marshmallow_gif.dir/src/config.cpp.o
  /home/konstantin/Projects/marshmallow_gif/include/config.hpp
  /home/konstantin/Projects/marshmallow_gif/src/config.cpp
@@ -3740,7 +3739,6 @@ CMakeFiles/marshmallow_gif.dir/src/main.cpp.o
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o
  /home/konstantin/Projects/marshmallow_gif/include/config.hpp
  /home/konstantin/Projects/marshmallow_gif/include/qt_mainwindow.hpp
- /home/konstantin/Projects/marshmallow_gif/lib/queue.hpp
  /home/konstantin/Projects/marshmallow_gif/src/qt_mainwindow.cpp
  /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/QVariant

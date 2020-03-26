@@ -39,6 +39,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->exit_btn, &QPushButton::clicked, this, &MainWindow::close);
     connect(ui->open_btn, &QPushButton::clicked, this, &MainWindow::open_gif);
+    connect(ui->speed_plus, &QPushButton::clicked, this, &MainWindow::speed_plus);
+    connect(ui->speed_minus, &QPushButton::clicked, this, &MainWindow::speed_minus);
+    connect(ui->speed_re, &QPushButton::clicked, this, &MainWindow::speed_reset);
+    connect(ui->next_frame_btn, &QPushButton::clicked, this, &MainWindow::frame_plus);
+    connect(ui->prev_frame_btn, &QPushButton::clicked, this, &MainWindow::frame_minus);
     connect(ui->pp_btn, &QPushButton::clicked, this, &MainWindow::change_pp_status);
 }
 
@@ -81,9 +86,72 @@ void MainWindow::change_pp_status()
     if(gif_animation == NULL) return;
 
     if(pp_status == false) gif_animation->start();
-    else gif_animation->stop();
+    else {
+        gif_animation->stop();
+    }
 
     pp_status = !pp_status;
+
+    pp_btn_change();
+}
+
+void MainWindow::speed_plus()
+{
+    if(gif_animation == NULL) return;
+
+    if(speed < 1000) speed += 5;
+    else speed = 5;
+
+    gif_animation->setSpeed(speed);
+
+    ui->indicator_msg->setText(QString::number(speed) + " %");
+}
+
+void MainWindow::speed_minus()
+{
+    if(gif_animation == NULL) return;
+
+    if(speed > 5) speed -= 5;
+    else speed = 1000;
+
+    gif_animation->setSpeed(speed);
+
+    ui->indicator_msg->setText(QString::number(speed) + " %");
+}
+
+void MainWindow::speed_reset()
+{
+    if(gif_animation == NULL) return;
+
+    speed = 100;
+
+    gif_animation->setSpeed(speed);
+
+    ui->indicator_msg->setText(QString::number(speed) + " %");
+}
+
+void MainWindow::frame_plus()
+{
+    if(gif_animation == NULL) return;
+
+    if(pp_status) gif_animation->stop();
+
+    pp_status = false;
+
+    gif_animation->jumpToNextFrame();
+
+    pp_btn_change();
+}
+
+void MainWindow::frame_minus()
+{
+    if(gif_animation == NULL) return;
+
+    if(pp_status) gif_animation->stop();
+
+    pp_status = false;
+
+    for(int i{0}; i < (gif_animation->currentFrameNumber() - 1); i++) gif_animation->jumpToNextFrame();
 
     pp_btn_change();
 }

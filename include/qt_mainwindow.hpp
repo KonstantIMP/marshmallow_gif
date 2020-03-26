@@ -5,8 +5,6 @@
 
 #include <QMovie>
 
-#include "../lib/queue.hpp"
-
 namespace Ui {
 class MainWindow;
 }
@@ -26,19 +24,28 @@ public:
 private slots:
     void change_pp_status();
 
+    void speed_plus();
+    void speed_minus();
+
+    void speed_reset();
+
+    void frame_plus();
+    void frame_minus();
+
 private:
     Ui::MainWindow *ui;
+
+    void pp_btn_change();
 
     void set_sys();
     void set_marsh();
     void set_or();
 
     bool pp_status;
-    unsigned int speed;
+
+    int speed;
 
     QMovie * gif_animation;
-
-    void pp_btn_change();
 };
 
 #endif // MAINWINDOW_HPP

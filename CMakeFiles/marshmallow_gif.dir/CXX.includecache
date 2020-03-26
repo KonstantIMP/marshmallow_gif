@@ -15,12 +15,6 @@ QMainWindow
 -
 QMovie
 -
-../lib/queue.hpp
-/home/konstantin/Projects/marshmallow_gif/lib/queue.hpp
-
-/home/konstantin/Projects/marshmallow_gif/lib/queue.hpp
-cstddef
--
 
 /home/konstantin/Projects/marshmallow_gif/src/qt_mainwindow.cpp
 ../include/qt_mainwindow.hpp

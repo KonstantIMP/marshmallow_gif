@@ -125,7 +125,6 @@ CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qwidget.h
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: include/qt_mainwindow.hpp
 CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: include/qt_start_setup.hpp
-CMakeFiles/marshmallow_gif.dir/marshmallow_gif_autogen/mocs_compilation.cpp.o: lib/queue.hpp
 
 CMakeFiles/marshmallow_gif.dir/src/config.cpp.o: include/config.hpp
 CMakeFiles/marshmallow_gif.dir/src/config.cpp.o: src/config.cpp
@@ -3739,7 +3738,6 @@ CMakeFiles/marshmallow_gif.dir/src/main.cpp.o: src/main.cpp
 
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: include/config.hpp
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: include/qt_mainwindow.hpp
-CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: lib/queue.hpp
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: src/qt_mainwindow.cpp
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/QDebug
 CMakeFiles/marshmallow_gif.dir/src/qt_mainwindow.cpp.o: /usr/include/qt/QtCore/QVariant
