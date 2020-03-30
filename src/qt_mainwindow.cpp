@@ -147,11 +147,13 @@ void MainWindow::frame_minus()
 {
     if(gif_animation == NULL) return;
 
-    if(pp_status) gif_animation->stop();
-
-    pp_status = false;
+    gif_animation->start();
 
     for(int i{0}; i < (gif_animation->currentFrameNumber() - 1); i++) gif_animation->jumpToNextFrame();
+
+    gif_animation->stop();
+
+    pp_status = false;
 
     pp_btn_change();
 }

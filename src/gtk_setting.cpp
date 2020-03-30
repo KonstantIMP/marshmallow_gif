@@ -15,12 +15,14 @@ GtkWidget * setting_win;
 
 GtkWidget * setting_msg;
 GtkWidget * theme_c_msg;
+GtkWidget * gui_msg;
 GtkWidget * lang_msg;
 GtkWidget * lot_msg;
 GtkWidget * update_msg;
 
 GtkWidget * theme_combo;
 GtkWidget * lang_combo;
+GtkWidget * gui_combo;
 GtkWidget * lot_combo;
 GtkWidget * update_combo;
 
@@ -89,11 +91,13 @@ static GtkWidget * create_option_win(){
 
     setting_msg = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "setting_msg"));
     theme_c_msg = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "theme_msg"));
+    gui_msg = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "gui_msg"));
     lang_msg = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "lang_msg"));
     lot_msg = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "lot_msg"));
     update_msg = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "update_msg"));
 
     theme_combo = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "theme_combo"));
+    gui_combo = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "gui_combo"));
     lang_combo = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "lang_combo"));
     lot_combo = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "lot_combo"));
     update_combo = GTK_WIDGET(gtk_builder_get_object(opt_win_builder, "update_combo"));
@@ -134,11 +138,13 @@ void connect_option_css(){
 
     gtk_widget_set_name(GTK_WIDGET(setting_msg), "setting_msg");
     gtk_widget_set_name(GTK_WIDGET(theme_c_msg), "theme_msg");
+    gtk_widget_set_name(GTK_WIDGET(gui_msg), "gui_msg");
     gtk_widget_set_name(GTK_WIDGET(lang_msg), "lang_msg");
     gtk_widget_set_name(GTK_WIDGET(lot_msg), "lot_msg");
     gtk_widget_set_name(GTK_WIDGET(update_msg), "update_msg");
 
     gtk_widget_set_name(GTK_WIDGET(theme_combo), "theme_combo");
+    gtk_widget_set_name(GTK_WIDGET(gui_combo), "gui_combo");
     gtk_widget_set_name(GTK_WIDGET(lang_combo), "lang_combo");
     gtk_widget_set_name(GTK_WIDGET(lot_combo), "lot_combo");
     gtk_widget_set_name(GTK_WIDGET(update_combo), "update_combo");
@@ -159,6 +165,9 @@ void set_text_lang(){
 
         gtk_label_set_text(GTK_LABEL(lang_msg), "Язык приложения :");
         gtk_label_set_xalign(GTK_LABEL(lang_msg), 0.1);
+
+        gtk_label_set_text(GTK_LABEL(gui_msg), "Интерфейс :");
+        gtk_label_set_xalign(GTK_LABEL(gui_msg), 0.1);
 
         gtk_label_set_text(GTK_LABEL(lot_msg), "Несколько файлов :");
         gtk_label_set_xalign(GTK_LABEL(lot_msg), 0.1);
@@ -192,6 +201,9 @@ void set_text_lang(){
         gtk_label_set_text(GTK_LABEL(lang_msg), "App language :");
         gtk_label_set_xalign(GTK_LABEL(lang_msg), 0.1);
 
+        gtk_label_set_text(GTK_LABEL(gui_msg), "App GUI :");
+        gtk_label_set_xalign(GTK_LABEL(gui_msg), 0.1);
+
         gtk_label_set_text(GTK_LABEL(lot_msg), "A lot of files :");
         gtk_label_set_xalign(GTK_LABEL(lot_msg), 0.1);
 
@@ -215,12 +227,17 @@ void set_text_lang(){
         gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(update_combo), "2", "Automatically");
     }
 
+    gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(gui_combo), "0", "GTK+");
+    gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(gui_combo), "1", "QT");
+
     if(get_param(THEME) == "system") gtk_combo_box_set_active(GTK_COMBO_BOX(theme_combo), 0);
     else if(get_param(THEME) == "marshmallow") gtk_combo_box_set_active(GTK_COMBO_BOX(theme_combo), 1);
     else gtk_combo_box_set_active(GTK_COMBO_BOX(theme_combo), 2);
 
     if(get_param(LANG) == "ru") gtk_combo_box_set_active(GTK_COMBO_BOX(lang_combo), 0);
     else gtk_combo_box_set_active(GTK_COMBO_BOX(lang_combo), 1);
+
+    gtk_combo_box_set_active(GTK_COMBO_BOX(gui_combo), 0);
 
     if(get_param(LOTS) == "last") gtk_combo_box_set_active(GTK_COMBO_BOX(lot_combo), 0);
     else gtk_combo_box_set_active(GTK_COMBO_BOX(lot_combo), 1);
@@ -235,8 +252,12 @@ void set_text_lang(){
 void rewrite_config(){
     std::string theme_p;
     std::string lang_p;
+    std::string gui_p;
     std::string lot_p;
     std::string update_p;
+
+    if(gtk_combo_box_get_active(GTK_COMBO_BOX(gui_combo)) == 0) gui_p = "gtk";
+    else gui_p = "qt";
 
     switch(gtk_combo_box_get_active(GTK_COMBO_BOX(theme_combo))){
         case 0: theme_p = "sys"; break;
@@ -258,7 +279,7 @@ void rewrite_config(){
 
     delete_cfg();
 
-    create_cfg("gtk", theme_p, lang_p, STANDART, STANDART, lot_p, update_p);
+    create_cfg(gui_p, theme_p, lang_p, STANDART, STANDART, lot_p, update_p);
 
     GtkWidget * warning_dialog;
 
